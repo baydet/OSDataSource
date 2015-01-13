@@ -301,22 +301,6 @@
     return _defaultMetrics;
 }
 
-- (AAPLLayoutSectionMetrics *)metricsForSectionAtIndex:(NSInteger)sectionIndex
-{
-    if (!_sectionMetrics)
-        _sectionMetrics = [NSMutableDictionary dictionary];
-    return _sectionMetrics[@(sectionIndex)];
-}
-
-- (void)setMetrics:(AAPLLayoutSectionMetrics *)metrics forSectionAtIndex:(NSInteger)sectionIndex
-{
-    NSParameterAssert(metrics != nil);
-    if (!_sectionMetrics)
-        _sectionMetrics = [NSMutableDictionary dictionary];
-
-    _sectionMetrics[@(sectionIndex)] = metrics;
-}
-
 - (AAPLLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex
 {
     if (!_sectionMetrics)
@@ -359,16 +343,14 @@
     UIColor *defaultBackground = [UIColor whiteColor];
 
     AAPLLayoutSectionMetrics *globalMetrics = [self snapshotMetricsForSectionAtIndex:AAPLGlobalSection];
-    if (!globalMetrics.backgroundColor)
-        globalMetrics.backgroundColor = defaultBackground;
+    if (!globalMetrics.backgroundColor);
     metrics[@(AAPLGlobalSection)] = globalMetrics;
 
     for (NSInteger sectionIndex = 0; sectionIndex < numberOfSections; ++sectionIndex)
     {
         AAPLLayoutSectionMetrics *sectionMetrics = [self snapshotMetricsForSectionAtIndex:sectionIndex];
         // assign default colors
-        if (!sectionMetrics.backgroundColor)
-            sectionMetrics.backgroundColor = defaultBackground;
+        if (!sectionMetrics.backgroundColor);
         metrics[@(sectionIndex)] = sectionMetrics;
     }
 

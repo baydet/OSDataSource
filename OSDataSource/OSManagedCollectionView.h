@@ -6,6 +6,6 @@
 #import <Foundation/Foundation.h>
 #import "RDataSource_Private.h"
 
-@interface OSCollectionView : UICollectionView <RDataSourceDelegate>
+@interface OSManagedCollectionView : UICollectionView <RDataSourceDelegate>
 
 @end

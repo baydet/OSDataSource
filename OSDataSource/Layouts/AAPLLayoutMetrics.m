@@ -81,7 +81,6 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
 {
     AAPLLayoutSectionMetrics *metrics = [[self alloc] init];
     metrics.rowHeight = 44;
-    metrics.numberOfColumns = 1;
     return metrics;
 }
 
@@ -92,9 +91,7 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
         return nil;
 
     _rowHeight = 0;
-    _numberOfColumns = 0;
     // If there's more than one column AND there's a separator color specified, we want to show a column separator by default.
-    _showsColumnSeparator = YES;
     return self;
 }
 
@@ -105,27 +102,11 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
         return nil;
 
     metrics->_rowHeight = _rowHeight;
-    metrics->_numberOfColumns = _numberOfColumns;
-    metrics->_showsColumnSeparator = _showsColumnSeparator;
-    metrics->_separatorInsets = _separatorInsets;
-    metrics->_sectionSeparatorInsets = _sectionSeparatorInsets;
     metrics->_hasPlaceholder = _hasPlaceholder;
     metrics->_headers = [_headers copy];
     metrics->_footers = [_footers copy];
     metrics->_flags = _flags;
     return metrics;
-}
-
-- (void)setBackgroundColor:(UIColor *)backgroundColor
-{
-    _backgroundColor = backgroundColor;
-    _flags.backgroundColor = YES;
-}
-
-- (void)setSelectedBackgroundColor:(UIColor *)selectedBackgroundColor
-{
-    _selectedBackgroundColor = selectedBackgroundColor;
-    _flags.selectedBackgroundColor = YES;
 }
 
 - (AAPLLayoutSupplementaryMetrics *)newHeader
@@ -153,26 +134,8 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
     if (!metrics)
         return;
 
-    if (!UIEdgeInsetsEqualToEdgeInsets(metrics.padding, UIEdgeInsetsZero))
-        self.padding = metrics.padding;
-
-    if (!UIEdgeInsetsEqualToEdgeInsets(metrics.separatorInsets, UIEdgeInsetsZero))
-        self.separatorInsets = metrics.separatorInsets;
-
-    if (!UIEdgeInsetsEqualToEdgeInsets(metrics.sectionSeparatorInsets, UIEdgeInsetsZero))
-        self.sectionSeparatorInsets = metrics.sectionSeparatorInsets;
-
     if (metrics.rowHeight)
         self.rowHeight = metrics.rowHeight;
-
-    if (metrics.numberOfColumns)
-        self.numberOfColumns = metrics.numberOfColumns;
-
-    if (metrics->_flags.backgroundColor)
-        self.backgroundColor = metrics.backgroundColor;
-
-    if (metrics->_flags.selectedBackgroundColor)
-        self.selectedBackgroundColor = metrics.selectedBackgroundColor;
 
     if (metrics.hasPlaceholder)
         self.hasPlaceholder = YES;

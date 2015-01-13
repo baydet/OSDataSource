@@ -15,7 +15,7 @@
 		ACCA552A78B92DC453D2E972 /* AAPLContentLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA551746D66FDB6E26D1E0 /* AAPLContentLoading.m */; };
 		ACCA5670E70A1DFD636DD6AF /* OSManagedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA56BBE6696984C1CC224A /* OSManagedDataSource.m */; };
 		ACCA58815F8C393F503493FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCA513762739FFF822B2E31 /* UIKit.framework */; };
-		ACCA5AC167B154F5D2C1B04F /* OSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA57D797933CD6222B1491 /* OSCollectionView.m */; };
+		ACCA5AC167B154F5D2C1B04F /* OSManagedCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA57D797933CD6222B1491 /* OSManagedCollectionView.m */; };
 		ACCA5B0CABA789828F78D6B1 /* RAlignedFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D6C97A1ED9E9495D0C3 /* RAlignedFlowLayout.m */; };
 		ACCA5D0C4DF4C7AAD67E016E /* AAPLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EAF2784B9BD0B1515A2 /* AAPLStateMachine.m */; };
 		ACCA5D163ED9D86A64075732 /* RComposedDataSource_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5CB7BC2D4D6E070D6D85 /* RComposedDataSource_Private.m */; };
@@ -64,7 +64,7 @@
 		ACCA55B80B733F58BB9CC278 /* RSegmentedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSegmentedDataSource.h; sourceTree = "<group>"; };
 		ACCA55BF028D4AB4B51EB18A /* NSObject+KVOBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOBlock.m"; sourceTree = "<group>"; };
 		ACCA56BBE6696984C1CC224A /* OSManagedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSManagedDataSource.m; sourceTree = "<group>"; };
-		ACCA57D797933CD6222B1491 /* OSCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCollectionView.m; sourceTree = "<group>"; };
+		ACCA57D797933CD6222B1491 /* OSManagedCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSManagedCollectionView.m; sourceTree = "<group>"; };
 		ACCA58C881A3BBF3B4EC7163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		ACCA59D3F8A9C8D36770FAA0 /* OSDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDataSource.h; sourceTree = "<group>"; };
 		ACCA5A5A529552BE1E7BEA39 /* OSPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPlaceholderView.h; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		ACCA5B99382A7467F2287900 /* AAPLLayoutMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLLayoutMetrics.h; sourceTree = "<group>"; };
 		ACCA5CB7BC2D4D6E070D6D85 /* RComposedDataSource_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RComposedDataSource_Private.m; sourceTree = "<group>"; };
 		ACCA5D282DCE383E6DD0E836 /* RHeadersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHeadersDataSource.m; sourceTree = "<group>"; };
-		ACCA5D2B1769F6C867B7094D /* OSCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCollectionView.h; sourceTree = "<group>"; };
+		ACCA5D2B1769F6C867B7094D /* OSManagedCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSManagedCollectionView.h; sourceTree = "<group>"; };
 		ACCA5D448CB5B04A118F30AF /* AAPLStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLStateMachine.h; sourceTree = "<group>"; };
 		ACCA5D6C97A1ED9E9495D0C3 /* RAlignedFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAlignedFlowLayout.m; sourceTree = "<group>"; };
 		ACCA5D713A5BF81EE7618C39 /* OSDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,10 +173,10 @@
 				ACCA5D448CB5B04A118F30AF /* AAPLStateMachine.h */,
 				ACCA54FBC2C23E7CC2F29C80 /* Categories */,
 				ACCA5627A2439F4A3BA36153 /* DataSources */,
-				ACCA57D797933CD6222B1491 /* OSCollectionView.m */,
+				ACCA57D797933CD6222B1491 /* OSManagedCollectionView.m */,
 				ACCA5EAF2784B9BD0B1515A2 /* AAPLStateMachine.m */,
 				ACCA55A36335FDAE77FC1362 /* Views */,
-				ACCA5D2B1769F6C867B7094D /* OSCollectionView.h */,
+				ACCA5D2B1769F6C867B7094D /* OSManagedCollectionView.h */,
 				ACCA534CC1DAB796DF40F56D /* AAPLContentLoading.h */,
 				ACCA5F95C8BC7996344F1CF0 /* Layouts */,
 				ACCA56BBE6696984C1CC224A /* OSManagedDataSource.m */,
@@ -309,7 +309,7 @@
 				ACCA5EEE88CF9289CDCAEDEA /* RComposedDataSource.m in Sources */,
 				ACCA5D48C5B9DE9E95793798 /* RSegmentedDataSource.m in Sources */,
 				ACCA5D163ED9D86A64075732 /* RComposedDataSource_Private.m in Sources */,
-				ACCA5AC167B154F5D2C1B04F /* OSCollectionView.m in Sources */,
+				ACCA5AC167B154F5D2C1B04F /* OSManagedCollectionView.m in Sources */,
 				ACCA5D0C4DF4C7AAD67E016E /* AAPLStateMachine.m in Sources */,
 				ACCA5D94B5D0A10AD5428715 /* OSPlaceholderView.m in Sources */,
 				ACCA50C2FCA1FD5DA3A3E40D /* AAPLLayoutMetrics.m in Sources */,

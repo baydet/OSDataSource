@@ -45,7 +45,7 @@
 /// Find the item at the specified index path.
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;
 
-/// Find the index paths of the specified item in the data source. An item may appear more than once in a given data source.
+/// Find the index paths of the specified item in the data source. An item may appears more than once in a given data source.
 - (NSArray *)indexPathsForItem:(id)item;
 
 /// Remove an item from the data source. This method should only be called as the result of a user action, such as tapping the "Delete" button in a swipe-to-delete gesture. Automatic removal of items due to outside changes should instead be handled by the data source itself — not the controller. Data sources must implement this to support swipe-to-delete.
@@ -83,10 +83,6 @@
 #pragma mark - Metrics
 
 @property(nonatomic, strong) AAPLLayoutSectionMetrics *defaultMetrics;
-
-- (AAPLLayoutSectionMetrics *)metricsForSectionAtIndex:(NSInteger)sectionIndex;
-
-- (void)setMetrics:(AAPLLayoutSectionMetrics *)metrics forSectionAtIndex:(NSInteger)sectionIndex;
 
 - (AAPLLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex;
 

@@ -3,10 +3,10 @@
 // Copyright (c) 2014 baydet. All rights reserved.
 //
 
-#import "OSCollectionView.h"
+#import "OSManagedCollectionView.h"
 
 
-@implementation OSCollectionView
+@implementation OSManagedCollectionView
 
 #pragma mark - RDataSourceDelegate methods
 

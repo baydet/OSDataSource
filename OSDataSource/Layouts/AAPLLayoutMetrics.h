@@ -74,27 +74,6 @@ typedef void (^AAPLLayoutSupplementaryItemConfigurationBlock)(UICollectionReusab
 /// The height of each row in the section. A value of AAPLRowHeightVariable will cause the layout to invoke -collectionView:sizeFittingSize:forItemAtIndexPath: on the data source for each cell. Sections will inherit a default value from the data source of 44.
 @property(nonatomic) CGFloat rowHeight;
 
-/// Number of columns in this section. Sections will inherit a default of 1 from the data source.
-@property(nonatomic) NSInteger numberOfColumns;
-
-/// Padding around the cells for this section. The top & bottom padding will be applied between the headers & footers and the cells. The left & right padding will be applied between the view edges and the cells.
-@property(nonatomic) UIEdgeInsets padding;
-
-/// Should a column separator be drawn. Default is YES.
-@property(nonatomic) BOOL showsColumnSeparator;
-
-/// Insets for the separators drawn between rows (left & right) and columns (top & bottom).
-@property(nonatomic) UIEdgeInsets separatorInsets;
-
-/// Insets for the section separator drawn below this section
-@property(nonatomic) UIEdgeInsets sectionSeparatorInsets;
-
-/// The color to use for the background of a cell in this section
-@property(nonatomic, strong) UIColor *backgroundColor;
-
-/// The color to use when a cell becomes highlighted or selected
-@property(nonatomic, strong) UIColor *selectedBackgroundColor;
-
 /// Create a new header associated with a specific data source
 - (AAPLLayoutSupplementaryMetrics *)newHeader;
 
