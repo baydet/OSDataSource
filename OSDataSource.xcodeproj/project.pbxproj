@@ -23,6 +23,7 @@
 		ACCA531EC419B34CA8B356A8 /* RHeadersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D282DCE383E6DD0E836 /* RHeadersDataSource.m */; };
 		ACCA535ABC2AF1BF32123734 /* E1DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EEA59D99CC5FC7F381A /* E1DataSource.m */; };
 		ACCA5455BA89DA2A940B5FDC /* NSObject+KVOBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55BF028D4AB4B51EB18A /* NSObject+KVOBlock.m */; };
+		ACCA549E398FDFC4ADE0279E /* OSSimpleDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA59E8F087700FAD15D585 /* OSSimpleDataSource.m */; };
 		ACCA54B469905219349757BA /* OSDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA529E66B72D9938898E09 /* OSDataSource.m */; };
 		ACCA54EA059C82CD0F7F379F /* OSManagedCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5F43FFBCC189EA9E7C66 /* OSManagedCollectionView.m */; };
 		ACCA552A78B92DC453D2E972 /* AAPLContentLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA551746D66FDB6E26D1E0 /* AAPLContentLoading.m */; };
@@ -89,6 +90,7 @@
 		ACCA515E0700C99DFD1FB87D /* OSPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPlaceholderView.m; sourceTree = "<group>"; };
 		ACCA51F8E03AA64796ABA520 /* NSObject+KVOBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOBlock.h"; sourceTree = "<group>"; };
 		ACCA523E3E791F1D905014E3 /* E1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E1ViewController.h; sourceTree = "<group>"; };
+		ACCA52485F772F3B5E09BCB8 /* OSSimpleDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSimpleDataSource.h; sourceTree = "<group>"; };
 		ACCA529E66B72D9938898E09 /* OSDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDataSource.m; sourceTree = "<group>"; };
 		ACCA534CC1DAB796DF40F56D /* AAPLContentLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLContentLoading.h; sourceTree = "<group>"; };
 		ACCA5388F5CD48B4FF3342C8 /* OSManagedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSManagedDataSource.m; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		ACCA58C881A3BBF3B4EC7163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		ACCA593BB3BB8C97DAC42D30 /* OSManagedCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSManagedCollectionView.h; sourceTree = "<group>"; };
 		ACCA59D3F8A9C8D36770FAA0 /* OSDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDataSource.h; sourceTree = "<group>"; };
+		ACCA59E8F087700FAD15D585 /* OSSimpleDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSimpleDataSource.m; sourceTree = "<group>"; };
 		ACCA5A5A529552BE1E7BEA39 /* OSPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPlaceholderView.h; sourceTree = "<group>"; };
 		ACCA5AD9AA1F404DC7BA6F4C /* libOSDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCA5B6D4BFCCC4606AEFF83 /* RAlignedFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAlignedFlowLayout.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				ACCA5E06530FA2DA82911CBB /* RSegmentedDataSource.m */,
 				ACCA5EAC7A830E7FBFC9C3D8 /* RComposedDataSource_Private.h */,
 				ACCA5CB7BC2D4D6E070D6D85 /* RComposedDataSource_Private.m */,
+				ACCA59E8F087700FAD15D585 /* OSSimpleDataSource.m */,
+				ACCA52485F772F3B5E09BCB8 /* OSSimpleDataSource.h */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 				ACCA54EA059C82CD0F7F379F /* OSManagedCollectionView.m in Sources */,
 				ACCA5DBE8D4ABE34EF5410BF /* OSManagedDataSource.m in Sources */,
 				ACCA535ABC2AF1BF32123734 /* E1DataSource.m in Sources */,
+				ACCA549E398FDFC4ADE0279E /* OSSimpleDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
