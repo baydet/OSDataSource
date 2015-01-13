@@ -94,7 +94,7 @@ NSString *const RSegmentedDataSourceHeaderKey = @"RSegmentedDataSourceHeaderKey"
 
 - (void)setSelectedDataSourceIndex:(NSInteger)selectedDataSourceIndex animated:(BOOL)animated
 {
-    OSDataSource *dataSource = _dataSources[selectedDataSourceIndex];
+    OSDataSource *dataSource = _dataSources[(NSUInteger) selectedDataSourceIndex];
     [self setSelectedDataSource:dataSource animated:animated completionHandler:nil];
 }
 

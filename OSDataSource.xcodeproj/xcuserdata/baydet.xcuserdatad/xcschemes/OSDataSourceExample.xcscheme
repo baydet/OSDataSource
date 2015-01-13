@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "867329F41A65038D0025E3D5"
+               BlueprintIdentifier = "86732A211A6547890025E3D5"
                BuildableName = "OSDataSourceExample.app"
                BlueprintName = "OSDataSourceExample"
                ReferencedContainer = "container:OSDataSource.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "867329F41A65038D0025E3D5"
+            BlueprintIdentifier = "86732A211A6547890025E3D5"
             BuildableName = "OSDataSourceExample.app"
             BlueprintName = "OSDataSourceExample"
             ReferencedContainer = "container:OSDataSource.xcodeproj">

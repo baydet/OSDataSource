@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  E1ViewController.h
 //  OSDataSourceExample
 //
 //  Created by Alexandr Evsyuchenya on 1/13/15.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class E1DataSource;
+
+@interface E1ViewController : UIViewController
 
 
 @end

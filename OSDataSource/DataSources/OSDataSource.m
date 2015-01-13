@@ -13,7 +13,7 @@
 
 #define OS_ASSERT_MAIN_THREAD NSAssert([NSThread isMainThread], @"This method must be called on the main thread")
 
-@interface OSDataSource () <AAPLStateMachineDelegate>
+@interface OSDataSource () <OSStateMachineDelegate>
 @property(nonatomic, strong) NSMutableArray *headers;
 @property(nonatomic, strong) NSMutableDictionary *headersByKey;
 @property(nonatomic, strong) AAPLLoadableContentStateMachine *stateMachine;

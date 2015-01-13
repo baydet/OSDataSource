@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "RAlignedFlowLayout.h"
 
-@interface RPlaceholderFlowLayout : RAlignedFlowLayout
+@interface OSPlaceholderFlowLayout : RAlignedFlowLayout
 
 @property(nonatomic, strong) NSMutableArray *placeholderMetrics;
 

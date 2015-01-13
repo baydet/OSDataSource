@@ -14,7 +14,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol AAPLStateMachineDelegate <NSObject>
+@protocol OSStateMachineDelegate <NSObject>
 
 @optional
 
@@ -28,13 +28,13 @@
 
 @end
 
-@interface AAPLStateMachine : NSObject
+@interface OSStateMachine : NSObject
 
 @property(copy, atomic) NSString *currentState;
 @property(retain, atomic) NSDictionary *validTransitions;
 
-/// If set, AAPLStateMachine invokes transition methods on this delegate instead of self. This allows AAPLStateMachine to be used where subclassing doesn't make sense. The delegate is invoked on the same thread as -setCurrentState:
-@property(weak, atomic) id <AAPLStateMachineDelegate> delegate;
+/// If set, OSStateMachine invokes transition methods on this delegate instead of self. This allows OSStateMachine to be used where subclassing doesn't make sense. The delegate is invoked on the same thread as -setCurrentState:
+@property(weak, atomic) id <OSStateMachineDelegate> delegate;
 
 /// use NSLog to output state transitions; useful for debugging, but can be noisy
 @property(assign, nonatomic) BOOL shouldLogStateTransitions;

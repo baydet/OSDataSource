@@ -9,14 +9,14 @@
   
  */
 
-#import "AAPLStateMachine.h"
+#import "OSStateMachine.h"
 
 #import <objc/message.h>
 #import <libkern/OSAtomic.h>
 
 static NSString *const AAPLStateNil = @"Nil";
 
-@implementation AAPLStateMachine
+@implementation OSStateMachine
 {
     OSSpinLock _lock;
 }
@@ -36,7 +36,7 @@ static NSString *const AAPLStateNil = @"Nil";
 
 - (id)target
 {
-    id <AAPLStateMachineDelegate> delegate = self.delegate;
+    id <OSStateMachineDelegate> delegate = self.delegate;
     if (delegate)
         return delegate;
     return self;

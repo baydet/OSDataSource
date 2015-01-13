@@ -3,7 +3,7 @@
 // Copyright (c) 2014 baydet. All rights reserved.
 //
 
-#import "RPlaceholderFlowLayout.h"
+#import "OSPlaceholderFlowLayout.h"
 #import "OSDataSource.h"
 #import "RDataSource_Private.h"
 
@@ -25,11 +25,11 @@
 
 @end
 
-@interface RPlaceholderFlowLayout ()
+@interface OSPlaceholderFlowLayout ()
 @property(nonatomic) BOOL shouldInsertPlaceholder;
 @end
 
-@implementation RPlaceholderFlowLayout
+@implementation OSPlaceholderFlowLayout
 
 - (CGSize)collectionViewContentSize
 {

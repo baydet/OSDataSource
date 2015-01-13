@@ -7,7 +7,7 @@
   
  */
 
-#import "AAPLStateMachine.h"
+#import "OSStateMachine.h"
 
 static NSString *const AAPLLoadStateInitial = @"Initial";
 static NSString *const AAPLLoadStateLoadingContent = @"LoadingState";
@@ -21,7 +21,7 @@ static NSString *const AAPLLoadStateFirstTimeLoad = @"FirstTimeLoad";
 typedef void (^AAPLLoadingUpdateBlock)(id object);
 
 /// A specialization of ITCStateMachine for content loading.
-@interface AAPLLoadableContentStateMachine : AAPLStateMachine
+@interface AAPLLoadableContentStateMachine : OSStateMachine
 @end
 
 /// A helper class passed to the content loading block of an AAPLLoadableContentViewController.
