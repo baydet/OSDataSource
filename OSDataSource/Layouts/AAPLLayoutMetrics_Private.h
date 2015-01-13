@@ -12,8 +12,8 @@
 
 #import "AAPLLayoutMetrics.h"
 
-@interface AAPLLayoutSupplementaryMetrics ()
+@interface OSLayoutSupplementaryMetrics ()
 @end
 
-@interface AAPLLayoutSectionMetrics ()
+@interface OSLayoutSectionMetrics ()
 @end

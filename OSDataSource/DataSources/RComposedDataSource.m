@@ -205,14 +205,14 @@
     return _sectionCount;
 }
 
-- (AAPLLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex
+- (OSLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex
 {
     AAPLComposedMapping *mapping = [self mappingForGlobalSection:sectionIndex];
     NSInteger localSection = [mapping localSectionForGlobalSection:sectionIndex];
     OSDataSource *dataSource = mapping.dataSource;
 
-    AAPLLayoutSectionMetrics *metrics = [dataSource snapshotMetricsForSectionAtIndex:localSection];
-    AAPLLayoutSectionMetrics *enclosingMetrics = [super snapshotMetricsForSectionAtIndex:sectionIndex];
+    OSLayoutSectionMetrics *metrics = [dataSource snapshotMetricsForSectionAtIndex:localSection];
+    OSLayoutSectionMetrics *enclosingMetrics = [super snapshotMetricsForSectionAtIndex:sectionIndex];
 
     [enclosingMetrics applyValuesFromMetrics:metrics];
     return enclosingMetrics;

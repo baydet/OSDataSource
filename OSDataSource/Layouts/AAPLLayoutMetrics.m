@@ -15,7 +15,7 @@ CGFloat const AAPLRowHeightVariable = -1000;
 CGFloat const AAPLRowHeightRemainder = -1001;
 NSInteger const AAPLGlobalSection = NSIntegerMax;
 
-@implementation AAPLLayoutSupplementaryMetrics
+@implementation OSLayoutSupplementaryMetrics
 
 - (NSString *)reuseIdentifier
 {
@@ -27,7 +27,7 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
 
 - (instancetype)copyWithZone:(NSZone *)zone
 {
-    AAPLLayoutSupplementaryMetrics *item = [[AAPLLayoutSupplementaryMetrics alloc] init];
+    OSLayoutSupplementaryMetrics *item = [[OSLayoutSupplementaryMetrics alloc] init];
     if (!item)
         return nil;
 
@@ -60,7 +60,7 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
 
 @end
 
-@implementation AAPLLayoutSectionMetrics
+@implementation OSLayoutSectionMetrics
 {
     struct
     {
@@ -79,7 +79,7 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
 
 + (instancetype)defaultMetrics
 {
-    AAPLLayoutSectionMetrics *metrics = [[self alloc] init];
+    OSLayoutSectionMetrics *metrics = [[self alloc] init];
     metrics.rowHeight = 44;
     return metrics;
 }
@@ -97,7 +97,7 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
 
 - (instancetype)copyWithZone:(NSZone *)zone
 {
-    AAPLLayoutSectionMetrics *metrics = [[AAPLLayoutSectionMetrics alloc] init];
+    OSLayoutSectionMetrics *metrics = [[OSLayoutSectionMetrics alloc] init];
     if (!metrics)
         return nil;
 
@@ -109,9 +109,9 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
     return metrics;
 }
 
-- (AAPLLayoutSupplementaryMetrics *)newHeader
+- (OSLayoutSupplementaryMetrics *)newHeader
 {
-    AAPLLayoutSupplementaryMetrics *header = [[AAPLLayoutSupplementaryMetrics alloc] init];
+    OSLayoutSupplementaryMetrics *header = [[OSLayoutSupplementaryMetrics alloc] init];
     if (!_headers)
         _headers = @[header];
     else
@@ -119,9 +119,9 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
     return header;
 }
 
-- (AAPLLayoutSupplementaryMetrics *)newFooter
+- (OSLayoutSupplementaryMetrics *)newFooter
 {
-    AAPLLayoutSupplementaryMetrics *footer = [[AAPLLayoutSupplementaryMetrics alloc] init];
+    OSLayoutSupplementaryMetrics *footer = [[OSLayoutSupplementaryMetrics alloc] init];
     if (!_footers)
         _footers = @[footer];
     else
@@ -129,7 +129,7 @@ NSInteger const AAPLGlobalSection = NSIntegerMax;
     return footer;
 }
 
-- (void)applyValuesFromMetrics:(AAPLLayoutSectionMetrics *)metrics
+- (void)applyValuesFromMetrics:(OSLayoutSectionMetrics *)metrics
 {
     if (!metrics)
         return;

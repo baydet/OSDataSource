@@ -9,6 +9,6 @@
 
 @interface RHeadersDataSource : OSDataSource
 
-- (AAPLLayoutSupplementaryMetrics *)addHeader;
+- (OSLayoutSupplementaryMetrics *)addHeader;
 
 @end

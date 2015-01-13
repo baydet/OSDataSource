@@ -13,7 +13,7 @@
     return [[_sectionMetrics allKeys] count];
 }
 
-- (AAPLLayoutSupplementaryMetrics *)addHeader
+- (OSLayoutSupplementaryMetrics *)addHeader
 {
     return [self newHeaderForSectionAtIndex:[[_sectionMetrics allKeys] count]];
 }

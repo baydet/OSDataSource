@@ -185,9 +185,9 @@ NSString *const RSegmentedDataSourceHeaderKey = @"RSegmentedDataSourceHeaderKey"
     segmentedControl.selectedSegmentIndex = self.selectedDataSourceIndex;
 }
 
-- (AAPLLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex
+- (OSLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex
 {
-    AAPLLayoutSupplementaryMetrics *defaultHeader = [self headerForKey:RSegmentedDataSourceHeaderKey];
+    OSLayoutSupplementaryMetrics *defaultHeader = [self headerForKey:RSegmentedDataSourceHeaderKey];
     if (self.shouldDisplayDefaultHeader)
     {
     }
@@ -198,8 +198,8 @@ NSString *const RSegmentedDataSourceHeaderKey = @"RSegmentedDataSourceHeaderKey"
     }
 
 
-    AAPLLayoutSectionMetrics *metrics = [_selectedDataSource snapshotMetricsForSectionAtIndex:sectionIndex];
-    AAPLLayoutSectionMetrics *enclosingMetrics = [super snapshotMetricsForSectionAtIndex:sectionIndex];
+    OSLayoutSectionMetrics *metrics = [_selectedDataSource snapshotMetricsForSectionAtIndex:sectionIndex];
+    OSLayoutSectionMetrics *enclosingMetrics = [super snapshotMetricsForSectionAtIndex:sectionIndex];
 
     [enclosingMetrics applyValuesFromMetrics:metrics];
     return enclosingMetrics;

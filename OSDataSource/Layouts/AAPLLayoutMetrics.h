@@ -11,23 +11,7 @@
 #import <UIKit/UIKit.h>
 
 extern NSString *const RCollectionElementKindPlaceholder;
-
-/// A variable height row. The row will be measured using the datasource method -collectionView:sizeFittingSize:forItemAtIndexPath:
-extern CGFloat const AAPLRowHeightVariable;
-
-/// Rows with this height will have a height equal to the height of the collection view minus the initial vertical offset of the row. Really, only one cell should have this height set. Don't abuse this.
-extern CGFloat const AAPLRowHeightRemainder;
-
 extern NSInteger const AAPLGlobalSection;
-
-typedef enum
-{
-// TODO: Need to implement leading & trailing layouts
-//    AAPLCellLayoutOrderLeadingToTrailing,
-//    AAPLCellLayoutOrderTrailingToLeading,
-            AAPLCellLayoutOrderLeftToRight,
-    AAPLCellLayoutOrderRightToLeft,
-} AAPLCellLayoutOrder;
 
 @class OSDataSource;
 
@@ -36,7 +20,7 @@ typedef UICollectionReusableView *(^AAPLLayoutSupplementaryItemCreationBlock)(UI
 typedef void (^AAPLLayoutSupplementaryItemConfigurationBlock)(UICollectionReusableView *view, OSDataSource *dataSource, NSIndexPath *indexPath);
 
 /// Definition of how supplementary views should be created and presented in a collection view.
-@interface AAPLLayoutSupplementaryMetrics : NSObject <NSCopying>
+@interface OSLayoutSupplementaryMetrics : NSObject <NSCopying>
 
 /// Should this supplementary view be displayed while the placeholder is visible?
 @property(nonatomic) BOOL visibleWhileShowingPlaceholder;
@@ -63,7 +47,7 @@ typedef void (^AAPLLayoutSupplementaryItemConfigurationBlock)(UICollectionReusab
 
 
 /// Definition of how a section within a collection view should be presented.
-@interface AAPLLayoutSectionMetrics : NSObject <NSCopying>
+@interface OSLayoutSectionMetrics : NSObject <NSCopying>
 
 @property(nonatomic) BOOL hasPlaceholder;
 
@@ -75,13 +59,13 @@ typedef void (^AAPLLayoutSupplementaryItemConfigurationBlock)(UICollectionReusab
 @property(nonatomic) CGFloat rowHeight;
 
 /// Create a new header associated with a specific data source
-- (AAPLLayoutSupplementaryMetrics *)newHeader;
+- (OSLayoutSupplementaryMetrics *)newHeader;
 
 /// Create a new footer associated with a specific data source.
-- (AAPLLayoutSupplementaryMetrics *)newFooter;
+- (OSLayoutSupplementaryMetrics *)newFooter;
 
 /// Update these metrics with the values from another metrics.
-- (void)applyValuesFromMetrics:(AAPLLayoutSectionMetrics *)metrics;
+- (void)applyValuesFromMetrics:(OSLayoutSectionMetrics *)metrics;
 
 /// Create a metrics instance
 + (instancetype)metrics;

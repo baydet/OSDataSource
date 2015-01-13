@@ -35,7 +35,7 @@
     if (!self)
         return nil;
 
-    _defaultMetrics = [[AAPLLayoutSectionMetrics alloc] init];
+    _defaultMetrics = [[OSLayoutSectionMetrics alloc] init];
     _checkedItems = [NSMutableArray array];
 
     self.fetchUpdatesAvailableDelegate = self;
@@ -86,17 +86,17 @@
 {
     NSInteger numberOfSections = self.numberOfSections;
 
-    AAPLLayoutSectionMetrics *globalMetrics = [self snapshotMetricsForSectionAtIndex:AAPLGlobalSection];
-    for (AAPLLayoutSupplementaryMetrics *headerMetrics in globalMetrics.headers)
+    OSLayoutSectionMetrics *globalMetrics = [self snapshotMetricsForSectionAtIndex:AAPLGlobalSection];
+    for (OSLayoutSupplementaryMetrics *headerMetrics in globalMetrics.headers)
         [collectionView registerClass:headerMetrics.supplementaryViewClass forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerMetrics.reuseIdentifier];
 
     for (NSInteger sectionIndex = 0; sectionIndex < numberOfSections; ++sectionIndex)
     {
-        AAPLLayoutSectionMetrics *metrics = [self snapshotMetricsForSectionAtIndex:sectionIndex];
+        OSLayoutSectionMetrics *metrics = [self snapshotMetricsForSectionAtIndex:sectionIndex];
 
-        for (AAPLLayoutSupplementaryMetrics *headerMetrics in metrics.headers)
+        for (OSLayoutSupplementaryMetrics *headerMetrics in metrics.headers)
             [collectionView registerClass:headerMetrics.supplementaryViewClass forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerMetrics.reuseIdentifier];
-        for (AAPLLayoutSupplementaryMetrics *footerMetrics in metrics.footers)
+        for (OSLayoutSupplementaryMetrics *footerMetrics in metrics.footers)
             [collectionView registerClass:footerMetrics.supplementaryViewClass forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerMetrics.reuseIdentifier];
     }
 
@@ -111,8 +111,8 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionVIew sizeForHeaderFittingSize:(CGSize)size atSectionIndex:(NSUInteger)sectionIndex
 {
-    AAPLLayoutSectionMetrics *metrics = _sectionMetrics[@(sectionIndex)];
-    AAPLLayoutSupplementaryMetrics *metrics1 = [metrics.headers firstObject];
+    OSLayoutSectionMetrics *metrics = _sectionMetrics[@(sectionIndex)];
+    OSLayoutSupplementaryMetrics *metrics1 = [metrics.headers firstObject];
     if (metrics1 == nil)
         return CGSizeZero;
     else
@@ -293,20 +293,20 @@
 
 #pragma mark - UICollectionView metrics
 
-- (AAPLLayoutSectionMetrics *)defaultMetrics
+- (OSLayoutSectionMetrics *)defaultMetrics
 {
     if (_defaultMetrics)
         return _defaultMetrics;
-    _defaultMetrics = [AAPLLayoutSectionMetrics defaultMetrics];
+    _defaultMetrics = [OSLayoutSectionMetrics defaultMetrics];
     return _defaultMetrics;
 }
 
-- (AAPLLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex
+- (OSLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex
 {
     if (!_sectionMetrics)
         _sectionMetrics = [NSMutableDictionary dictionary];
 
-    AAPLLayoutSectionMetrics *metrics = [self.defaultMetrics copy];
+    OSLayoutSectionMetrics *metrics = [self.defaultMetrics copy];
     [metrics applyValuesFromMetrics:_sectionMetrics[@(sectionIndex)]];
 
     // The root data source puts its headers into the special global section. Other data sources put theirs into their 0 section.
@@ -342,27 +342,24 @@
 
     UIColor *defaultBackground = [UIColor whiteColor];
 
-    AAPLLayoutSectionMetrics *globalMetrics = [self snapshotMetricsForSectionAtIndex:AAPLGlobalSection];
-    if (!globalMetrics.backgroundColor);
+    OSLayoutSectionMetrics *globalMetrics = [self snapshotMetricsForSectionAtIndex:AAPLGlobalSection];
     metrics[@(AAPLGlobalSection)] = globalMetrics;
 
     for (NSInteger sectionIndex = 0; sectionIndex < numberOfSections; ++sectionIndex)
     {
-        AAPLLayoutSectionMetrics *sectionMetrics = [self snapshotMetricsForSectionAtIndex:sectionIndex];
-        // assign default colors
-        if (!sectionMetrics.backgroundColor);
+        OSLayoutSectionMetrics *sectionMetrics = [self snapshotMetricsForSectionAtIndex:sectionIndex];
         metrics[@(sectionIndex)] = sectionMetrics;
     }
 
     return metrics;
 }
 
-- (AAPLLayoutSupplementaryMetrics *)headerForKey:(NSString *)key
+- (OSLayoutSupplementaryMetrics *)headerForKey:(NSString *)key
 {
     return _headersByKey[key];
 }
 
-- (AAPLLayoutSupplementaryMetrics *)newHeaderForKey:(NSString *)key
+- (OSLayoutSupplementaryMetrics *)newHeaderForKey:(NSString *)key
 {
     if (!_headers)
         _headers = [NSMutableArray array];
@@ -371,20 +368,20 @@
 
     NSAssert(!_headersByKey[key], @"Attempting to add a header for a key that already exists: %@", key);
 
-    AAPLLayoutSupplementaryMetrics *header = [[AAPLLayoutSupplementaryMetrics alloc] init];
+    OSLayoutSupplementaryMetrics *header = [[OSLayoutSupplementaryMetrics alloc] init];
     _headersByKey[key] = header;
     [_headers addObject:header];
     return header;
 }
 
-- (void)replaceHeaderForKey:(NSString *)key withHeader:(AAPLLayoutSupplementaryMetrics *)header
+- (void)replaceHeaderForKey:(NSString *)key withHeader:(OSLayoutSupplementaryMetrics *)header
 {
     if (!_headers)
         _headers = [NSMutableArray array];
     if (!_headersByKey)
         _headersByKey = [NSMutableDictionary dictionary];
 
-    AAPLLayoutSupplementaryMetrics *oldHeader = _headersByKey[key];
+    OSLayoutSupplementaryMetrics *oldHeader = _headersByKey[key];
     NSAssert(oldHeader != nil, @"Attempting to replace a header that doesn't exist: key = %@", key);
 
     NSInteger headerIndex = [_headers indexOfObject:oldHeader];
@@ -399,37 +396,37 @@
     if (!_headersByKey)
         _headersByKey = [NSMutableDictionary dictionary];
 
-    AAPLLayoutSupplementaryMetrics *oldHeader = _headersByKey[key];
+    OSLayoutSupplementaryMetrics *oldHeader = _headersByKey[key];
     NSAssert(oldHeader != nil, @"Attempting to remove a header that doesn't exist: key = %@", key);
 
     [_headers removeObject:oldHeader];
     [_headersByKey removeObjectForKey:key];
 }
 
-- (AAPLLayoutSupplementaryMetrics *)newHeaderForSectionAtIndex:(NSInteger)sectionIndex
+- (OSLayoutSupplementaryMetrics *)newHeaderForSectionAtIndex:(NSInteger)sectionIndex
 {
     if (!_sectionMetrics)
         _sectionMetrics = [NSMutableDictionary dictionary];
 
-    AAPLLayoutSectionMetrics *metrics = _sectionMetrics[@(sectionIndex)];
+    OSLayoutSectionMetrics *metrics = _sectionMetrics[@(sectionIndex)];
     if (!metrics)
     {
-        metrics = [AAPLLayoutSectionMetrics metrics];
+        metrics = [OSLayoutSectionMetrics metrics];
         _sectionMetrics[@(sectionIndex)] = metrics;
     }
 
     return [metrics newHeader];
 }
 
-- (AAPLLayoutSupplementaryMetrics *)newFooterForSectionAtIndex:(NSInteger)sectionIndex
+- (OSLayoutSupplementaryMetrics *)newFooterForSectionAtIndex:(NSInteger)sectionIndex
 {
     if (!_sectionMetrics)
         _sectionMetrics = [NSMutableDictionary dictionary];
 
-    AAPLLayoutSectionMetrics *metrics = _sectionMetrics[@(sectionIndex)];
+    OSLayoutSectionMetrics *metrics = _sectionMetrics[@(sectionIndex)];
     if (!metrics)
     {
-        metrics = [AAPLLayoutSectionMetrics metrics];
+        metrics = [OSLayoutSectionMetrics metrics];
         _sectionMetrics[@(sectionIndex)] = metrics;
     }
 
@@ -783,8 +780,8 @@
         dataSource = [self dataSourceForSectionAtIndex:section];
     }
 
-    AAPLLayoutSectionMetrics *sectionMetrics = [self snapshotMetricsForSectionAtIndex:section];
-    AAPLLayoutSupplementaryMetrics *metrics;
+    OSLayoutSectionMetrics *sectionMetrics = [self snapshotMetricsForSectionAtIndex:section];
+    OSLayoutSupplementaryMetrics *metrics;
 
     if ([kind isEqualToString:UICollectionElementKindSectionHeader])
     {

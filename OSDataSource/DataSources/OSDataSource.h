@@ -29,7 +29,7 @@
 
 @property(nonatomic, weak) id <RDataSourceDelegate> delegate;
 
-@property(nonatomic, strong) AAPLLayoutSupplementaryMetrics *placeholderMetrics;
+@property(nonatomic, strong) OSLayoutSupplementaryMetrics *placeholderMetrics;
 
 @property(nonatomic, weak) id <RLocalContentUpdatesAvailabilityProtocol> fetchUpdatesAvailableDelegate;
 
@@ -82,27 +82,27 @@
 
 #pragma mark - Metrics
 
-@property(nonatomic, strong) AAPLLayoutSectionMetrics *defaultMetrics;
+@property(nonatomic, strong) OSLayoutSectionMetrics *defaultMetrics;
 
-- (AAPLLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex;
+- (OSLayoutSectionMetrics *)snapshotMetricsForSectionAtIndex:(NSInteger)sectionIndex;
 
 /// Look up a header by its key
-- (AAPLLayoutSupplementaryMetrics *)headerForKey:(NSString *)key;
+- (OSLayoutSupplementaryMetrics *)headerForKey:(NSString *)key;
 
 /// Create a new header and append it to the collection of headers
-- (AAPLLayoutSupplementaryMetrics *)newHeaderForKey:(NSString *)key;
+- (OSLayoutSupplementaryMetrics *)newHeaderForKey:(NSString *)key;
 
 /// Remove a header specified by its key
 - (void)removeHeaderForKey:(NSString *)key;
 
 /// Replace a header specified by its key with a new header with the same key.
-- (void)replaceHeaderForKey:(NSString *)key withHeader:(AAPLLayoutSupplementaryMetrics *)header;
+- (void)replaceHeaderForKey:(NSString *)key withHeader:(OSLayoutSupplementaryMetrics *)header;
 
 /// Create a new header for a specific section. This is a convenience method for adding a header via the section metrics.
-- (AAPLLayoutSupplementaryMetrics *)newHeaderForSectionAtIndex:(NSInteger)sectionIndex;
+- (OSLayoutSupplementaryMetrics *)newHeaderForSectionAtIndex:(NSInteger)sectionIndex;
 
 /// Create a new footer for a specific section. This is a convenience method for adding a footer via the section metrics.
-- (AAPLLayoutSupplementaryMetrics *)newFooterForSectionAtIndex:(NSInteger)sectionIndex;
+- (OSLayoutSupplementaryMetrics *)newFooterForSectionAtIndex:(NSInteger)sectionIndex;
 
 /// Compute a flattened snapshot of the layout metrics associated with this and any child data sources.
 - (NSDictionary *)snapshotMetrics;
