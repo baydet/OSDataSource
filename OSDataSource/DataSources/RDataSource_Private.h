@@ -1,12 +1,9 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information
- 
  Abstract:
  
   The base data source class.
   
-  This file contains methods used internally by subclasses. These methods are not considered part of the public API of AAPLDataSource. It is possible to implement fully functional data sources without using these methods.
+  This file contains methods used internally by subclasses. These methods are not considered part of the public API of OSDataSource. It is possible to implement fully functional data sources without using these methods.
   
  */
 

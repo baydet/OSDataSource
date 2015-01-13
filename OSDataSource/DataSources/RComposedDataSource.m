@@ -1,7 +1,4 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information
- 
  Abstract:
  
   A subclass of AAPLDataSource with multiple child data sources. Child data sources may have multiple sections. Load content messages will be sent to all child data sources.
@@ -249,62 +246,6 @@
     return [dataSource collectionView:wrapper sizeForHeaderFittingSize:size atSectionIndex:localSection];
 }
 
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canEditItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    AAPLComposedMapping *mapping = [self mappingForGlobalSection:indexPath.section];
-    UICollectionView *wrapper = [AAPLComposedViewWrapper wrapperForView:collectionView mapping:mapping];
-    OSDataSource *dataSource = mapping.dataSource;
-    NSIndexPath *localIndexPath = [mapping localIndexPathForGlobalIndexPath:indexPath];
-
-    return [dataSource collectionView:wrapper canEditItemAtIndexPath:localIndexPath];
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    AAPLComposedMapping *mapping = [self mappingForGlobalSection:indexPath.section];
-    UICollectionView *wrapper = [AAPLComposedViewWrapper wrapperForView:collectionView mapping:mapping];
-    OSDataSource *dataSource = mapping.dataSource;
-    NSIndexPath *localIndexPath = [mapping localIndexPathForGlobalIndexPath:indexPath];
-
-    return [dataSource collectionView:wrapper canMoveItemAtIndexPath:localIndexPath];
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)destinationIndexPath
-{
-    // This is a bit simplistic: basically, if the move is between data sources, I'm going to assume the answer is NO. Subclasses can improve upon this if desired.
-    AAPLComposedMapping *fromMapping = [self mappingForGlobalSection:indexPath.section];
-    AAPLComposedMapping *toMapping = [self mappingForGlobalSection:destinationIndexPath.section];
-
-    if (toMapping != fromMapping)
-        return NO;
-
-    UICollectionView *wrapper = [AAPLComposedViewWrapper wrapperForView:collectionView mapping:fromMapping];
-    OSDataSource *dataSource = fromMapping.dataSource;
-
-    NSIndexPath *localFromIndexPath = [fromMapping localIndexPathForGlobalIndexPath:indexPath];
-    NSIndexPath *localToIndexPath = [fromMapping localIndexPathForGlobalIndexPath:destinationIndexPath];
-
-    return [dataSource collectionView:wrapper canMoveItemAtIndexPath:localFromIndexPath toIndexPath:localToIndexPath];
-}
-
-- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)destinationIndexPath
-{
-    // This is a bit simplistic: basically, if the move is between data sources, I'm going to assume the answer is NO. Subclasses can improve upon this if desired.
-    AAPLComposedMapping *fromMapping = [self mappingForGlobalSection:indexPath.section];
-    AAPLComposedMapping *toMapping = [self mappingForGlobalSection:destinationIndexPath.section];
-
-    if (toMapping != fromMapping)
-        return;
-
-    UICollectionView *wrapper = [AAPLComposedViewWrapper wrapperForView:collectionView mapping:fromMapping];
-    OSDataSource *dataSource = fromMapping.dataSource;
-
-    NSIndexPath *localFromIndexPath = [fromMapping localIndexPathForGlobalIndexPath:indexPath];
-    NSIndexPath *localToIndexPath = [fromMapping localIndexPathForGlobalIndexPath:destinationIndexPath];
-
-    [dataSource collectionView:wrapper moveItemAtIndexPath:localFromIndexPath toIndexPath:localToIndexPath];
-}
 
 #pragma mark - AAPLContentLoading
 
