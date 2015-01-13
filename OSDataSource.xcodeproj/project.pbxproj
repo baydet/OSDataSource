@@ -8,26 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		ACCA50C2FCA1FD5DA3A3E40D /* AAPLLayoutMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55AEA0B9F2D38A26113E /* AAPLLayoutMetrics.m */; };
-		ACCA51BF848BEFD510414543 /* UICollectionView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA52233B74D7D0B25B66AF /* UICollectionView+Helpers.m */; };
-		ACCA520AA8F44021ED0DC831 /* RAlignedFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA565E8BFDAC6A624AE70F /* RAlignedFlowLayout.m */; };
+		ACCA526D9FB660BD4DF6CE07 /* RPlaceholderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA515B95B5824994D47D39 /* RPlaceholderFlowLayout.m */; };
 		ACCA531EC419B34CA8B356A8 /* RHeadersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D282DCE383E6DD0E836 /* RHeadersDataSource.m */; };
 		ACCA5455BA89DA2A940B5FDC /* NSObject+KVOBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55BF028D4AB4B51EB18A /* NSObject+KVOBlock.m */; };
 		ACCA54B469905219349757BA /* OSDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA529E66B72D9938898E09 /* OSDataSource.m */; };
 		ACCA552A78B92DC453D2E972 /* AAPLContentLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA551746D66FDB6E26D1E0 /* AAPLContentLoading.m */; };
 		ACCA5670E70A1DFD636DD6AF /* OSManagedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA56BBE6696984C1CC224A /* OSManagedDataSource.m */; };
-		ACCA571FD20E050A19D33BA9 /* RPlaceholderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D68367882BE8C5D1776 /* RPlaceholderFlowLayout.m */; };
-		ACCA5737C65218C2447C6A8B /* AAPLHairlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA573AE6A7412B74671169 /* AAPLHairlineView.m */; };
 		ACCA58815F8C393F503493FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCA513762739FFF822B2E31 /* UIKit.framework */; };
-		ACCA59A1ABBFE724BCE511B0 /* UIView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA584834C9FC6AFA6ED68B /* UIView+Helpers.m */; };
-		ACCA5AB305038F826D2A9DA6 /* AAPLAction.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA544019F06BB24FE415F6 /* AAPLAction.m */; };
-		ACCA5AC167B154F5D2C1B04F /* RCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA57D797933CD6222B1491 /* RCollectionView.m */; };
-		ACCA5BB2BA7CB8C1F0552F7E /* AAPLPinnableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D470ACB55A7C211FAD4 /* AAPLPinnableHeaderView.m */; };
+		ACCA5AC167B154F5D2C1B04F /* OSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA57D797933CD6222B1491 /* OSCollectionView.m */; };
+		ACCA5B0CABA789828F78D6B1 /* RAlignedFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D6C97A1ED9E9495D0C3 /* RAlignedFlowLayout.m */; };
 		ACCA5D0C4DF4C7AAD67E016E /* AAPLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EAF2784B9BD0B1515A2 /* AAPLStateMachine.m */; };
 		ACCA5D163ED9D86A64075732 /* RComposedDataSource_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5CB7BC2D4D6E070D6D85 /* RComposedDataSource_Private.m */; };
 		ACCA5D48C5B9DE9E95793798 /* RSegmentedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5E06530FA2DA82911CBB /* RSegmentedDataSource.m */; };
-		ACCA5D94B5D0A10AD5428715 /* AAPLPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA515E0700C99DFD1FB87D /* AAPLPlaceholderView.m */; };
+		ACCA5D94B5D0A10AD5428715 /* OSPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA515E0700C99DFD1FB87D /* OSPlaceholderView.m */; };
 		ACCA5DF27441B82E68E3AF2C /* libOSDataSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCA5AD9AA1F404DC7BA6F4C /* libOSDataSource.a */; };
-		ACCA5EE01B237474BCBC25F5 /* AAPLCollectionViewGridLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA52A5ABC46F686275A357 /* AAPLCollectionViewGridLayoutAttributes.m */; };
 		ACCA5EEE88CF9289CDCAEDEA /* RComposedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA50351D2042984E85D958 /* RComposedDataSource.m */; };
 /* End PBXBuildFile section */
 
@@ -55,52 +49,39 @@
 
 /* Begin PBXFileReference section */
 		ACCA50351D2042984E85D958 /* RComposedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RComposedDataSource.m; sourceTree = "<group>"; };
-		ACCA507627896EDF35332879 /* RAlignedFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAlignedFlowLayout.h; sourceTree = "<group>"; };
-		ACCA50DD0EF12D030E7F5F24 /* AAPLCollectionViewGridLayoutAttributes_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCollectionViewGridLayoutAttributes_Private.h; sourceTree = "<group>"; };
 		ACCA513762739FFF822B2E31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACCA5150AD9D6F89DBBD8C4E /* RHeadersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHeadersDataSource.h; sourceTree = "<group>"; };
-		ACCA515E0700C99DFD1FB87D /* AAPLPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPlaceholderView.m; sourceTree = "<group>"; };
+		ACCA515B95B5824994D47D39 /* RPlaceholderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPlaceholderFlowLayout.m; sourceTree = "<group>"; };
+		ACCA515E0700C99DFD1FB87D /* OSPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPlaceholderView.m; sourceTree = "<group>"; };
 		ACCA51F8E03AA64796ABA520 /* NSObject+KVOBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOBlock.h"; sourceTree = "<group>"; };
-		ACCA52233B74D7D0B25B66AF /* UICollectionView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Helpers.m"; sourceTree = "<group>"; };
 		ACCA529E66B72D9938898E09 /* OSDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDataSource.m; sourceTree = "<group>"; };
-		ACCA52A5ABC46F686275A357 /* AAPLCollectionViewGridLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCollectionViewGridLayoutAttributes.m; sourceTree = "<group>"; };
 		ACCA534CC1DAB796DF40F56D /* AAPLContentLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLContentLoading.h; sourceTree = "<group>"; };
-		ACCA544019F06BB24FE415F6 /* AAPLAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLAction.m; sourceTree = "<group>"; };
 		ACCA54A2082179F68109130D /* AAPLLayoutMetrics_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLLayoutMetrics_Private.h; sourceTree = "<group>"; };
 		ACCA54C67A75B88634FEC4DF /* OSManagedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSManagedDataSource.h; sourceTree = "<group>"; };
-		ACCA5505D216FE7655E03F72 /* AAPLCollectionViewGridLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCollectionViewGridLayoutAttributes.h; sourceTree = "<group>"; };
 		ACCA551746D66FDB6E26D1E0 /* AAPLContentLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLContentLoading.m; sourceTree = "<group>"; };
-		ACCA5518E6B5D2DAA38A14A4 /* UIView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helpers.h"; sourceTree = "<group>"; };
 		ACCA55AEA0B9F2D38A26113E /* AAPLLayoutMetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLLayoutMetrics.m; sourceTree = "<group>"; };
 		ACCA55AF741013C9FD91A1FF /* RComposedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RComposedDataSource.h; sourceTree = "<group>"; };
 		ACCA55B80B733F58BB9CC278 /* RSegmentedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSegmentedDataSource.h; sourceTree = "<group>"; };
 		ACCA55BF028D4AB4B51EB18A /* NSObject+KVOBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOBlock.m"; sourceTree = "<group>"; };
-		ACCA55E3DE45B6155F1426D6 /* UICollectionView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Helpers.h"; sourceTree = "<group>"; };
-		ACCA565E8BFDAC6A624AE70F /* RAlignedFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAlignedFlowLayout.m; sourceTree = "<group>"; };
 		ACCA56BBE6696984C1CC224A /* OSManagedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSManagedDataSource.m; sourceTree = "<group>"; };
-		ACCA56C2EA7F2DA843690650 /* AAPLHairlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLHairlineView.h; sourceTree = "<group>"; };
-		ACCA573AE6A7412B74671169 /* AAPLHairlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLHairlineView.m; sourceTree = "<group>"; };
-		ACCA57D797933CD6222B1491 /* RCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCollectionView.m; sourceTree = "<group>"; };
-		ACCA584834C9FC6AFA6ED68B /* UIView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helpers.m"; sourceTree = "<group>"; };
+		ACCA57D797933CD6222B1491 /* OSCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCollectionView.m; sourceTree = "<group>"; };
 		ACCA58C881A3BBF3B4EC7163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		ACCA5925B23EE263B95CC262 /* AAPLPinnableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLPinnableHeaderView.h; sourceTree = "<group>"; };
 		ACCA59D3F8A9C8D36770FAA0 /* OSDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDataSource.h; sourceTree = "<group>"; };
-		ACCA59FF47507B6B40FBB621 /* AAPLAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLAction.h; sourceTree = "<group>"; };
-		ACCA5A5A529552BE1E7BEA39 /* AAPLPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLPlaceholderView.h; sourceTree = "<group>"; };
-		ACCA5AC01644140CC25B067D /* RPlaceholderFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPlaceholderFlowLayout.h; sourceTree = "<group>"; };
+		ACCA5A5A529552BE1E7BEA39 /* OSPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPlaceholderView.h; sourceTree = "<group>"; };
 		ACCA5AD9AA1F404DC7BA6F4C /* libOSDataSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSDataSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCA5B6D4BFCCC4606AEFF83 /* RAlignedFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAlignedFlowLayout.h; sourceTree = "<group>"; };
 		ACCA5B99382A7467F2287900 /* AAPLLayoutMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLLayoutMetrics.h; sourceTree = "<group>"; };
 		ACCA5CB7BC2D4D6E070D6D85 /* RComposedDataSource_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RComposedDataSource_Private.m; sourceTree = "<group>"; };
 		ACCA5D282DCE383E6DD0E836 /* RHeadersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHeadersDataSource.m; sourceTree = "<group>"; };
-		ACCA5D2B1769F6C867B7094D /* RCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCollectionView.h; sourceTree = "<group>"; };
+		ACCA5D2B1769F6C867B7094D /* OSCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCollectionView.h; sourceTree = "<group>"; };
 		ACCA5D448CB5B04A118F30AF /* AAPLStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLStateMachine.h; sourceTree = "<group>"; };
-		ACCA5D470ACB55A7C211FAD4 /* AAPLPinnableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPinnableHeaderView.m; sourceTree = "<group>"; };
-		ACCA5D68367882BE8C5D1776 /* RPlaceholderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPlaceholderFlowLayout.m; sourceTree = "<group>"; };
+		ACCA5D6C97A1ED9E9495D0C3 /* RAlignedFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAlignedFlowLayout.m; sourceTree = "<group>"; };
 		ACCA5D713A5BF81EE7618C39 /* OSDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCA5E06530FA2DA82911CBB /* RSegmentedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSegmentedDataSource.m; sourceTree = "<group>"; };
 		ACCA5EAC7A830E7FBFC9C3D8 /* RComposedDataSource_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RComposedDataSource_Private.h; sourceTree = "<group>"; };
 		ACCA5EAF2784B9BD0B1515A2 /* AAPLStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLStateMachine.m; sourceTree = "<group>"; };
 		ACCA5F7A276EA40230C448DF /* RDataSource_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDataSource_Private.h; sourceTree = "<group>"; };
+		ACCA5F9E7189363A1CC0D134 /* RPlaceholderFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPlaceholderFlowLayout.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,12 +133,8 @@
 		ACCA54FBC2C23E7CC2F29C80 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				ACCA5518E6B5D2DAA38A14A4 /* UIView+Helpers.h */,
-				ACCA584834C9FC6AFA6ED68B /* UIView+Helpers.m */,
 				ACCA51F8E03AA64796ABA520 /* NSObject+KVOBlock.h */,
 				ACCA55BF028D4AB4B51EB18A /* NSObject+KVOBlock.m */,
-				ACCA55E3DE45B6155F1426D6 /* UICollectionView+Helpers.h */,
-				ACCA52233B74D7D0B25B66AF /* UICollectionView+Helpers.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -165,12 +142,8 @@
 		ACCA55A36335FDAE77FC1362 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ACCA56C2EA7F2DA843690650 /* AAPLHairlineView.h */,
-				ACCA573AE6A7412B74671169 /* AAPLHairlineView.m */,
-				ACCA5A5A529552BE1E7BEA39 /* AAPLPlaceholderView.h */,
-				ACCA515E0700C99DFD1FB87D /* AAPLPlaceholderView.m */,
-				ACCA5925B23EE263B95CC262 /* AAPLPinnableHeaderView.h */,
-				ACCA5D470ACB55A7C211FAD4 /* AAPLPinnableHeaderView.m */,
+				ACCA5A5A529552BE1E7BEA39 /* OSPlaceholderView.h */,
+				ACCA515E0700C99DFD1FB87D /* OSPlaceholderView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,20 +169,14 @@
 		ACCA5A0230AE4E71098811BB /* OSDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				ACCA59FF47507B6B40FBB621 /* AAPLAction.h */,
 				ACCA551746D66FDB6E26D1E0 /* AAPLContentLoading.m */,
 				ACCA5D448CB5B04A118F30AF /* AAPLStateMachine.h */,
-				ACCA5D68367882BE8C5D1776 /* RPlaceholderFlowLayout.m */,
 				ACCA54FBC2C23E7CC2F29C80 /* Categories */,
-				ACCA565E8BFDAC6A624AE70F /* RAlignedFlowLayout.m */,
-				ACCA507627896EDF35332879 /* RAlignedFlowLayout.h */,
 				ACCA5627A2439F4A3BA36153 /* DataSources */,
-				ACCA5AC01644140CC25B067D /* RPlaceholderFlowLayout.h */,
-				ACCA57D797933CD6222B1491 /* RCollectionView.m */,
-				ACCA544019F06BB24FE415F6 /* AAPLAction.m */,
+				ACCA57D797933CD6222B1491 /* OSCollectionView.m */,
 				ACCA5EAF2784B9BD0B1515A2 /* AAPLStateMachine.m */,
 				ACCA55A36335FDAE77FC1362 /* Views */,
-				ACCA5D2B1769F6C867B7094D /* RCollectionView.h */,
+				ACCA5D2B1769F6C867B7094D /* OSCollectionView.h */,
 				ACCA534CC1DAB796DF40F56D /* AAPLContentLoading.h */,
 				ACCA5F95C8BC7996344F1CF0 /* Layouts */,
 				ACCA56BBE6696984C1CC224A /* OSManagedDataSource.m */,
@@ -241,9 +208,10 @@
 				ACCA5B99382A7467F2287900 /* AAPLLayoutMetrics.h */,
 				ACCA55AEA0B9F2D38A26113E /* AAPLLayoutMetrics.m */,
 				ACCA54A2082179F68109130D /* AAPLLayoutMetrics_Private.h */,
-				ACCA5505D216FE7655E03F72 /* AAPLCollectionViewGridLayoutAttributes.h */,
-				ACCA52A5ABC46F686275A357 /* AAPLCollectionViewGridLayoutAttributes.m */,
-				ACCA50DD0EF12D030E7F5F24 /* AAPLCollectionViewGridLayoutAttributes_Private.h */,
+				ACCA515B95B5824994D47D39 /* RPlaceholderFlowLayout.m */,
+				ACCA5B6D4BFCCC4606AEFF83 /* RAlignedFlowLayout.h */,
+				ACCA5D6C97A1ED9E9495D0C3 /* RAlignedFlowLayout.m */,
+				ACCA5F9E7189363A1CC0D134 /* RPlaceholderFlowLayout.h */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -335,25 +303,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCA552A78B92DC453D2E972 /* AAPLContentLoading.m in Sources */,
-				ACCA571FD20E050A19D33BA9 /* RPlaceholderFlowLayout.m in Sources */,
-				ACCA59A1ABBFE724BCE511B0 /* UIView+Helpers.m in Sources */,
 				ACCA5455BA89DA2A940B5FDC /* NSObject+KVOBlock.m in Sources */,
-				ACCA51BF848BEFD510414543 /* UICollectionView+Helpers.m in Sources */,
-				ACCA520AA8F44021ED0DC831 /* RAlignedFlowLayout.m in Sources */,
 				ACCA54B469905219349757BA /* OSDataSource.m in Sources */,
 				ACCA531EC419B34CA8B356A8 /* RHeadersDataSource.m in Sources */,
 				ACCA5EEE88CF9289CDCAEDEA /* RComposedDataSource.m in Sources */,
 				ACCA5D48C5B9DE9E95793798 /* RSegmentedDataSource.m in Sources */,
 				ACCA5D163ED9D86A64075732 /* RComposedDataSource_Private.m in Sources */,
-				ACCA5AC167B154F5D2C1B04F /* RCollectionView.m in Sources */,
-				ACCA5AB305038F826D2A9DA6 /* AAPLAction.m in Sources */,
+				ACCA5AC167B154F5D2C1B04F /* OSCollectionView.m in Sources */,
 				ACCA5D0C4DF4C7AAD67E016E /* AAPLStateMachine.m in Sources */,
-				ACCA5737C65218C2447C6A8B /* AAPLHairlineView.m in Sources */,
-				ACCA5D94B5D0A10AD5428715 /* AAPLPlaceholderView.m in Sources */,
-				ACCA5BB2BA7CB8C1F0552F7E /* AAPLPinnableHeaderView.m in Sources */,
+				ACCA5D94B5D0A10AD5428715 /* OSPlaceholderView.m in Sources */,
 				ACCA50C2FCA1FD5DA3A3E40D /* AAPLLayoutMetrics.m in Sources */,
-				ACCA5EE01B237474BCBC25F5 /* AAPLCollectionViewGridLayoutAttributes.m in Sources */,
 				ACCA5670E70A1DFD636DD6AF /* OSManagedDataSource.m in Sources */,
+				ACCA526D9FB660BD4DF6CE07 /* RPlaceholderFlowLayout.m in Sources */,
+				ACCA5B0CABA789828F78D6B1 /* RAlignedFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

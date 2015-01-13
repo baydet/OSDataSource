@@ -10,7 +10,7 @@
 
 #import "RDataSource_Private.h"
 #import "RSegmentedDataSource.h"
-#import "AAPLPlaceholderView.h"
+#import "OSPlaceholderView.h"
 
 NSString *const RSegmentedDataSourceHeaderKey = @"RSegmentedDataSourceHeaderKey";
 

@@ -12,7 +12,7 @@
 #import "RDataSource_Private.h"
 #import "RComposedDataSource.h"
 #import "RComposedDataSource_Private.h"
-#import "AAPLPlaceholderView.h"
+#import "OSPlaceholderView.h"
 
 @interface RComposedDataSource () <RDataSourceDelegate>
 @property(nonatomic, retain) NSMutableArray *mappings;

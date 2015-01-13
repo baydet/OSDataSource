@@ -3,12 +3,10 @@
 // Copyright (c) 2014 baydet. All rights reserved.
 //
 
-#import "RCollectionView.h"
+#import "OSCollectionView.h"
 
 
-@implementation RCollectionView
-
-#pragma mark - NSFetchedResultsControllerDelegate protocol
+@implementation OSCollectionView
 
 #pragma mark - RDataSourceDelegate methods
 
@@ -68,7 +66,6 @@
 
 - (void)dataSourceWillLoadContent:(OSDataSource *)dataSource
 {
-
 }
 
 - (void)dataSourceNeedsInvalidateLayout:(OSDataSource *)dataSource

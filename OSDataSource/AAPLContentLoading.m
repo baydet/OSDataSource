@@ -1,7 +1,4 @@
 /*
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information
- 
  Abstract:
  
   AAPLLoadableContentStateMachine — This is the state machine that manages transitions for all loadable content.

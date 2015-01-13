@@ -41,26 +41,11 @@ typedef void (^AAPLLayoutSupplementaryItemConfigurationBlock)(UICollectionReusab
 /// Should this supplementary view be displayed while the placeholder is visible?
 @property(nonatomic) BOOL visibleWhileShowingPlaceholder;
 
-/// Should this supplementary view be pinned to the top of the view when scrolling? Only valid for header supplementary views.
-@property(nonatomic) BOOL shouldPin;
-
 /// The height of the supplementary view. If set to 0, the view will be measured to determine its optimal height.
 @property(nonatomic) CGFloat height;
 
-/// Should the supplementary view be hidden?
-@property(nonatomic) BOOL hidden;
-
-/// Use top & bottom padding to adjust spacing of header & footer elements. Not all headers & footers adhere to padding. Default is UIEdgeInsetsZero which is interpretted by supplementary items to be their default values.
-@property(nonatomic) UIEdgeInsets padding;
-
 /// The class to use when dequeuing an instance of this supplementary view
 @property(nonatomic) Class supplementaryViewClass;
-
-/// The background color that should be used for this supplementary view. If not set, this will be inherited from the section.
-@property(nonatomic, strong) UIColor *backgroundColor;
-
-/// The background color shown when this header is selected. If not set, this will be inherited from the section. Use [UIColor clearColor] instead of nil to override a selection color from the section (this will be translated into nil).
-@property(nonatomic, strong) UIColor *selectedBackgroundColor;
 
 /// Optional reuse identifier. If not specified, this will be inferred from the class of the supplementary view.
 @property(nonatomic, copy) NSString *reuseIdentifier;
@@ -109,18 +94,6 @@ typedef void (^AAPLLayoutSupplementaryItemConfigurationBlock)(UICollectionReusab
 
 /// The color to use when a cell becomes highlighted or selected
 @property(nonatomic, strong) UIColor *selectedBackgroundColor;
-
-/// The color to use when drawing the row separators (and column separators when numberOfColumns > 1 && showsColumnSeparator == YES).
-@property(nonatomic, strong) UIColor *separatorColor;
-
-/// The color to use when drawing the section separator below this section
-@property(nonatomic, strong) UIColor *sectionSeparatorColor;
-
-/// Should the section separator be shown at the bottom of the last section. Default is NO.
-@property(nonatomic) BOOL showsSectionSeparatorWhenLastSection;
-
-/// How the cells should be laid out when there are multiple columns. The current default is AAPLCellLayoutOrderLeftToRight, but it SHOULD be AAPLCellLayoutLeadingToTrailing.
-@property(nonatomic) AAPLCellLayoutOrder cellLayoutOrder;
 
 /// Create a new header associated with a specific data source
 - (AAPLLayoutSupplementaryMetrics *)newHeader;

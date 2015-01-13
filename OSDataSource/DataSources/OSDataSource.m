@@ -7,7 +7,7 @@
 
 #import "AAPLContentLoading.h"
 #import "RDataSource_Private.h"
-#import "AAPLPlaceholderView.h"
+#import "OSPlaceholderView.h"
 #import "NSObject+KVOBlock.h"
 #import <libkern/OSAtomic.h>
 
