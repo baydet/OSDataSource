@@ -12,7 +12,7 @@
 
 @interface E1ViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet OSPlaceholderFlowLayout *flowLayout;
+@property (strong, nonatomic) OSPlaceholderFlowLayout *flowLayout;
 
 @property(nonatomic, strong) E1DataSource *dataSource;
 @end
@@ -23,14 +23,19 @@
     [super viewDidLoad];
     self.dataSource = [E1DataSource new];
     self.collectionView.dataSource = self.dataSource;
+    self.flowLayout = [OSPlaceholderFlowLayout new];
+    self.flowLayout.estimatedItemSize = CGSizeMake(CGRectGetWidth([UIApplication sharedApplication].keyWindow.bounds), 50);
+    self.flowLayout.minimumInteritemSpacing = 7;
+    self.flowLayout.minimumLineSpacing = 7;
+    self.collectionView.collectionViewLayout = self.flowLayout;
     [self.dataSource registerReusableViewsWithCollectionView:self.collectionView];
 }
 
-- (void)viewDidLayoutSubviews
+- (void)viewWillLayoutSubviews
 {
-    [super viewDidLayoutSubviews];
-    self.flowLayout.estimatedItemSize = CGSizeMake(CGRectGetWidth(self.collectionView.bounds), 50);
+    [super viewWillLayoutSubviews];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

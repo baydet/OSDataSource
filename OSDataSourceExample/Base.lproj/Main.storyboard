@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ddP-Pb-dLR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bAj-Ee-8Gz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-YU-dsz">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-YU-dsz">
                                 <rect key="frame" x="160" y="90" width="280" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="RVx-h3-OQY"/>
@@ -51,10 +51,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="gYD-gO-k8b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lde-of-zYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-504" y="401"/>
+            <point key="canvasLocation" x="308" y="401"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -68,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SIV-bb-BLp">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SIV-bb-BLp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Bhk-t2-KjY" customClass="OSPlaceholderFlowLayout"/>
@@ -77,10 +78,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SIV-bb-BLp" secondAttribute="bottom" id="Y4y-gY-8t4"/>
-                            <constraint firstItem="SIV-bb-BLp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iiR-zY-lz6"/>
-                            <constraint firstAttribute="trailing" secondItem="SIV-bb-BLp" secondAttribute="trailing" id="sZF-mS-Esy"/>
-                            <constraint firstItem="SIV-bb-BLp" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="yoJ-vv-d2M"/>
+                            <constraint firstItem="SIV-bb-BLp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="446-7e-g5z"/>
+                            <constraint firstItem="SIV-bb-BLp" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="5FY-LH-Guj"/>
+                            <constraint firstAttribute="bottom" secondItem="SIV-bb-BLp" secondAttribute="bottom" id="NCD-ag-SzS"/>
+                            <constraint firstAttribute="trailing" secondItem="SIV-bb-BLp" secondAttribute="trailing" id="fiW-db-UVa"/>
                         </constraints>
                     </view>
                     <connections>
@@ -90,7 +91,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="401"/>
+            <point key="canvasLocation" x="1080" y="401"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mcX-qK-f1I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bAj-Ee-8Gz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eGg-N5-Hzm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ddP-Pb-dLR" kind="relationship" relationship="rootViewController" id="tDR-ks-9mM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHg-Kr-Lyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-504" y="401"/>
         </scene>
     </scenes>
 </document>

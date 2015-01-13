@@ -19,10 +19,13 @@
     {
         self.label = [UILabel new];
         self.label.translatesAutoresizingMaskIntoConstraints = NO;
+        self.label.numberOfLines = 0;
+        self.label.preferredMaxLayoutWidth = CGRectGetWidth([UIApplication sharedApplication].keyWindow.bounds);
         [self.contentView addSubview:self.label];
 
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_label]|" options:NSLayoutFormatAlignAllBaseline metrics:nil views:NSDictionaryOfVariableBindings(_label)]];
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_label]|" options:NSLayoutFormatAlignAllBaseline metrics:nil views:NSDictionaryOfVariableBindings(_label)]];
+        [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_label attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0]];
+//        [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_label attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationLessThanOrEqual toItem:self.contentView attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0]];
     }
 
     return self;
@@ -52,7 +55,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [super collectionView:collectionView numberOfItemsInSection:section];
+    return self.items.count;
 }
 
 
@@ -66,6 +69,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     E1Cell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([E1Cell class]) forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor redColor];
     cell.label.text = [self itemAtIndexPath:indexPath];
     return cell;
 }
