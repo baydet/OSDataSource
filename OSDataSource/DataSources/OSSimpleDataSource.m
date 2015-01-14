@@ -42,11 +42,7 @@
     __weak typeof(self) weakSelf = self;
     [self loadContentWithBlock:^(AAPLLoading *loading) {
         weakSelf.objects = objects;
-        if (![objects isKindOfClass:[NSArray class]])
-        {
-            [loading doneWithError:[NSError errorWithDomain:@"Wrong Data" code:-1 userInfo:nil]];
-        }
-        else if (objects.count)
+        if (objects.count)
         {
             if (self.objects.count)
                 [loading updateWithContent:nil];

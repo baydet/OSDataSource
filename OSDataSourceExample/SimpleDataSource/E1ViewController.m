@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = [E1DataSource new];
+    self.title = self.dataSource.title;
     self.collectionView.dataSource = self.dataSource;
     self.flowLayout = [OSPlaceholderFlowLayout new];
     self.flowLayout.estimatedItemSize = CGSizeMake(CGRectGetWidth([UIApplication sharedApplication].keyWindow.bounds), 50);

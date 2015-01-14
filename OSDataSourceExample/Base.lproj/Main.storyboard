@@ -16,13 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-YU-dsz">
-                                <rect key="frame" x="160" y="90" width="280" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-YU-dsz">
+                                <rect key="frame" x="160" y="134" width="280" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="RVx-h3-OQY"/>
                                     <constraint firstAttribute="height" constant="60" id="Z3m-0R-Iuq"/>
                                 </constraints>
-                                <state key="normal" title="Simple Sample">
+                                <state key="normal" title="Simple DataSource">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -38,11 +38,35 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="1c0-Ib-QMf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvk-Sy-Gmi">
+                                <rect key="frame" x="160" y="229" width="280" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="P8D-Ll-N3T"/>
+                                    <constraint firstAttribute="height" constant="60" id="YZD-pa-F7i"/>
+                                </constraints>
+                                <state key="normal" title="Segmented DataSource">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="qGO-bE-0nI" kind="show" id="jud-J6-VTY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Zvk-Sy-Gmi" firstAttribute="leading" secondItem="uwN-YU-dsz" secondAttribute="leading" id="Kkl-ok-Vsr"/>
                             <constraint firstItem="fwD-QD-8OB" firstAttribute="top" secondItem="uwN-YU-dsz" secondAttribute="bottom" constant="450" id="TWh-fn-Ugt"/>
                             <constraint firstItem="uwN-YU-dsz" firstAttribute="top" secondItem="8U5-Si-QSL" secondAttribute="bottom" constant="70" id="ffn-hA-KDd"/>
+                            <constraint firstItem="Zvk-Sy-Gmi" firstAttribute="top" secondItem="uwN-YU-dsz" secondAttribute="bottom" constant="35" id="lJH-1y-oL0"/>
                             <constraint firstItem="uwN-YU-dsz" firstAttribute="centerX" secondItem="p4i-aa-kJf" secondAttribute="centerX" id="zfY-7k-Rm1"/>
                         </constraints>
                         <variation key="default">
@@ -92,6 +116,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1080" y="401"/>
+        </scene>
+        <!--SegmentedDS View Controller-->
+        <scene sceneID="4Ul-zs-Bm1">
+            <objects>
+                <viewController id="qGO-bE-0nI" customClass="SegmentedDSViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iFM-Em-eKk"/>
+                        <viewControllerLayoutGuide type="bottom" id="SIN-8p-Aro"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kig-Tf-sXb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aFq-g3-9OH">
+                                <rect key="frame" x="0.0" y="93" width="600" height="507"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Ukg-ag-70L" customClass="OSPlaceholderFlowLayout"/>
+                                <cells/>
+                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UaU-3c-YUE">
+                                <rect key="frame" x="0.0" y="64" width="600" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="qGO-bE-0nI" eventType="valueChanged" id="eoe-eV-Q7E"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UaU-3c-YUE" firstAttribute="top" secondItem="iFM-Em-eKk" secondAttribute="bottom" id="1Oj-ap-eGz"/>
+                            <constraint firstItem="aFq-g3-9OH" firstAttribute="leading" secondItem="Kig-Tf-sXb" secondAttribute="leading" id="9Cc-7S-VEH"/>
+                            <constraint firstItem="aFq-g3-9OH" firstAttribute="top" secondItem="UaU-3c-YUE" secondAttribute="bottom" constant="1" id="Kyp-sY-e7A"/>
+                            <constraint firstAttribute="trailing" secondItem="aFq-g3-9OH" secondAttribute="trailing" id="NLd-Fj-In1"/>
+                            <constraint firstItem="aFq-g3-9OH" firstAttribute="trailing" secondItem="UaU-3c-YUE" secondAttribute="trailing" id="OPU-vp-PNE"/>
+                            <constraint firstItem="UaU-3c-YUE" firstAttribute="leading" secondItem="aFq-g3-9OH" secondAttribute="leading" id="TfW-2F-MGb"/>
+                            <constraint firstItem="aFq-g3-9OH" firstAttribute="bottom" secondItem="SIN-8p-Aro" secondAttribute="top" id="wYZ-ru-3o8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="aFq-g3-9OH" id="2aZ-DS-Ad9"/>
+                        <outlet property="segmentedControl" destination="UaU-3c-YUE" id="sCJ-ZE-dxT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSd-n3-2AI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="1109"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mcX-qK-f1I">

@@ -44,6 +44,7 @@
     self = [super init];
     if (self)
     {
+        self.title = @"Simple DataSource";
         [self loadContentWithObjects:@[@"one", @"one oneoneoneoneone one one oneone onesfdsf one", @"oneoneoneone  oneone", @"sdfasdfa sdf as df as df as df", @"asdf as df as df asdfasdfas a", @"asdfasd asdfasdf "]];
     }
 
