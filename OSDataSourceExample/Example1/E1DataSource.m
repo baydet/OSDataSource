@@ -34,7 +34,6 @@
 @end
 
 @interface E1DataSource ()
-@property(nonatomic, strong) NSArray *items;
 @end
 
 @implementation E1DataSource
@@ -45,18 +44,11 @@
     self = [super init];
     if (self)
     {
-        self.items = @[@"one", @"one oneoneoneoneone one one oneone onesfdsf one", @"oneoneoneone  oneone", @"sdfasdfa sdf as df as df as df", @"asdf as df as df asdfasdfas a", @"asdfasd asdfasdf "];
+        [self loadContentWithObjects:@[@"one", @"one oneoneoneoneone one one oneone onesfdsf one", @"oneoneoneone  oneone", @"sdfasdfa sdf as df as df as df", @"asdf as df as df asdfasdfas a", @"asdfasd asdfasdf "]];
     }
 
     return self;
 }
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return self.items.count;
-}
-
 
 - (void)registerReusableViewsWithCollectionView:(UICollectionView *)collectionView
 {
@@ -72,11 +64,5 @@
     cell.label.text = [self itemAtIndexPath:indexPath];
     return cell;
 }
-
-- (id)itemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return self.items[(NSUInteger) indexPath.item];
-}
-
 
 @end

@@ -5,7 +5,8 @@
 
 #import <Foundation/Foundation.h>
 #import "OSDataSource.h"
+#import "OSSimpleDataSource.h"
 
 
-@interface E1DataSource : OSDataSource
+@interface E1DataSource : OSSimpleDataSource
 @end

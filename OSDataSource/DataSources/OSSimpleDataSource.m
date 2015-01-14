@@ -14,7 +14,7 @@
 {
 
 }
-- (instancetype)initWithObjects:(id <NSFastEnumeration>)objects
+- (instancetype)initWithObjects:(NSArray *)objects
 {
     self = [super init];
     if (self)
@@ -39,7 +39,9 @@
 
 - (void)loadContentWithObjects:(NSArray *)objects
 {
+    __weak typeof(self) weakSelf = self;
     [self loadContentWithBlock:^(AAPLLoading *loading) {
+        weakSelf.objects = objects;
         if (![objects isKindOfClass:[NSArray class]])
         {
             [loading doneWithError:[NSError errorWithDomain:@"Wrong Data" code:-1 userInfo:nil]];
