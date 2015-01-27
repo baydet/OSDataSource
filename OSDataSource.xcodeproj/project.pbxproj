@@ -30,6 +30,7 @@
 		ACCA552A78B92DC453D2E972 /* AAPLContentLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA551746D66FDB6E26D1E0 /* AAPLContentLoading.m */; };
 		ACCA579DA7B6021AEE15E085 /* E1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55C0BD394E57811F54B1 /* E1ViewController.m */; };
 		ACCA58815F8C393F503493FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCA513762739FFF822B2E31 /* UIKit.framework */; };
+		ACCA591EAC63FB14125FD191 /* ComposedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA51BE35DC7A2C037236D1 /* ComposedViewController.m */; };
 		ACCA5B0CABA789828F78D6B1 /* RAlignedFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D6C97A1ED9E9495D0C3 /* RAlignedFlowLayout.m */; };
 		ACCA5C21B6950B7BB5A36744 /* EmptyDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA58E070955D0DCF186E2D /* EmptyDataSource.m */; };
 		ACCA5D0C4DF4C7AAD67E016E /* OSStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EAF2784B9BD0B1515A2 /* OSStateMachine.m */; };
@@ -91,11 +92,13 @@
 		ACCA5150AD9D6F89DBBD8C4E /* RHeadersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHeadersDataSource.h; sourceTree = "<group>"; };
 		ACCA515B95B5824994D47D39 /* OSPlaceholderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPlaceholderFlowLayout.m; sourceTree = "<group>"; };
 		ACCA515E0700C99DFD1FB87D /* OSPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPlaceholderView.m; sourceTree = "<group>"; };
+		ACCA51BE35DC7A2C037236D1 /* ComposedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposedViewController.m; sourceTree = "<group>"; };
 		ACCA51F8E03AA64796ABA520 /* NSObject+KVOBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOBlock.h"; sourceTree = "<group>"; };
 		ACCA523E3E791F1D905014E3 /* E1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E1ViewController.h; sourceTree = "<group>"; };
 		ACCA52485F772F3B5E09BCB8 /* OSSimpleDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSimpleDataSource.h; sourceTree = "<group>"; };
 		ACCA529E66B72D9938898E09 /* OSDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDataSource.m; sourceTree = "<group>"; };
 		ACCA534CC1DAB796DF40F56D /* AAPLContentLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLContentLoading.h; sourceTree = "<group>"; };
+		ACCA536BD5C170FA3193C3FA /* ComposedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposedViewController.h; sourceTree = "<group>"; };
 		ACCA5388F5CD48B4FF3342C8 /* OSManagedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSManagedDataSource.m; sourceTree = "<group>"; };
 		ACCA54A2082179F68109130D /* AAPLLayoutMetrics_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLLayoutMetrics_Private.h; sourceTree = "<group>"; };
 		ACCA550EE3AA1EACC1B2E523 /* SegmentedDSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedDSViewController.m; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 				86732A241A6547890025E3D5 /* Supporting Files */,
 				ACCA5838BDBDD6876142B0E8 /* SimpleDataSource */,
 				ACCA5CBB1AE864B63C493CBB /* SegmentedDataSource */,
+				ACCA596D308496540E2C241B /* ComposedDataSource */,
 			);
 			path = OSDataSourceExample;
 			sourceTree = "<group>";
@@ -285,6 +289,15 @@
 				ACCA523E3E791F1D905014E3 /* E1ViewController.h */,
 			);
 			path = SimpleDataSource;
+			sourceTree = "<group>";
+		};
+		ACCA596D308496540E2C241B /* ComposedDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				ACCA51BE35DC7A2C037236D1 /* ComposedViewController.m */,
+				ACCA536BD5C170FA3193C3FA /* ComposedViewController.h */,
+			);
+			path = ComposedDataSource;
 			sourceTree = "<group>";
 		};
 		ACCA5A0230AE4E71098811BB /* OSDataSource */ = {
@@ -509,6 +522,7 @@
 				86732A271A6547890025E3D5 /* main.m in Sources */,
 				ACCA579DA7B6021AEE15E085 /* E1ViewController.m in Sources */,
 				ACCA5C21B6950B7BB5A36744 /* EmptyDataSource.m in Sources */,
+				ACCA591EAC63FB14125FD191 /* ComposedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

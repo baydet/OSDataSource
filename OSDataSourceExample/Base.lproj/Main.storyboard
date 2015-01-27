@@ -60,6 +60,28 @@
                                     <segue destination="qGO-bE-0nI" kind="show" id="jud-J6-VTY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NQ-Ym-R5x">
+                                <rect key="frame" x="160" y="323" width="280" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Kez-cS-75O"/>
+                                    <constraint firstAttribute="width" constant="280" id="LVr-dv-wmL"/>
+                                </constraints>
+                                <state key="normal" title="Composed DataSource">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="cyK-ru-eXW" kind="show" id="G10-69-qOX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -67,6 +89,8 @@
                             <constraint firstItem="fwD-QD-8OB" firstAttribute="top" secondItem="uwN-YU-dsz" secondAttribute="bottom" constant="450" id="TWh-fn-Ugt"/>
                             <constraint firstItem="uwN-YU-dsz" firstAttribute="top" secondItem="8U5-Si-QSL" secondAttribute="bottom" constant="70" id="ffn-hA-KDd"/>
                             <constraint firstItem="Zvk-Sy-Gmi" firstAttribute="top" secondItem="uwN-YU-dsz" secondAttribute="bottom" constant="35" id="lJH-1y-oL0"/>
+                            <constraint firstItem="0NQ-Ym-R5x" firstAttribute="leading" secondItem="Zvk-Sy-Gmi" secondAttribute="leading" id="uyy-fu-mye"/>
+                            <constraint firstItem="0NQ-Ym-R5x" firstAttribute="top" secondItem="Zvk-Sy-Gmi" secondAttribute="bottom" constant="34" id="vf6-pj-o2y"/>
                             <constraint firstItem="uwN-YU-dsz" firstAttribute="centerX" secondItem="p4i-aa-kJf" secondAttribute="centerX" id="zfY-7k-Rm1"/>
                         </constraints>
                         <variation key="default">
@@ -80,6 +104,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lde-of-zYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="308" y="401"/>
+        </scene>
+        <!--Composed DataSource-->
+        <scene sceneID="ot5-IF-Hou">
+            <objects>
+                <viewController title="Composed DataSource" id="cyK-ru-eXW" customClass="ComposedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ErW-gb-DxE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lx0-n7-Shq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mQ2-eX-liM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rfH-X9-Fkm" customClass="OSManagedCollectionView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="dIK-Ga-5Mi" customClass="OSPlaceholderFlowLayout"/>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rfH-X9-Fkm" firstAttribute="leading" secondItem="mQ2-eX-liM" secondAttribute="leading" id="PF4-1G-ImQ"/>
+                            <constraint firstAttribute="trailing" secondItem="rfH-X9-Fkm" secondAttribute="trailing" id="Wsz-Lq-UoE"/>
+                            <constraint firstItem="rfH-X9-Fkm" firstAttribute="bottom" secondItem="Lx0-n7-Shq" secondAttribute="top" id="ZFA-qI-9kQ"/>
+                            <constraint firstItem="rfH-X9-Fkm" firstAttribute="top" secondItem="mQ2-eX-liM" secondAttribute="top" id="g9p-5k-FbG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="rfH-X9-Fkm" id="U5Z-9K-D2G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gA9-e1-WJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="-285"/>
         </scene>
         <!--Simple DataSource-->
         <scene sceneID="ufC-wZ-h7g">
