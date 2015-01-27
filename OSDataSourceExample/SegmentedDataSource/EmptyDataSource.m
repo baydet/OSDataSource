@@ -16,9 +16,7 @@
         self.noContentTitle = @"There is no contnent";
         self.noContentMessage = @"Definetly";
 
-        OSLayoutSupplementaryMetrics *supplementaryMetrics = [OSLayoutSupplementaryMetrics new];
-        supplementaryMetrics.height = 300;
-        self.placeholderMetrics = supplementaryMetrics;
+        self.placeholderMetrics.height = 300;
     }
 
     return self;

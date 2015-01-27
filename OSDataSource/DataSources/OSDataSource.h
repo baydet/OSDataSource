@@ -23,6 +23,7 @@
 {
     NSMutableDictionary *_sectionMetrics;
     NSMutableArray *_checkedItems;
+    OSLayoutSupplementaryMetrics *_placeholderMetrics;
 }
 
 - (instancetype)init;

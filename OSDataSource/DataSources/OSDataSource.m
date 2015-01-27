@@ -122,6 +122,17 @@
     }
 }
 
+- (OSLayoutSupplementaryMetrics *)placeholderMetrics
+{
+    if (!_placeholderMetrics)
+    {
+        OSLayoutSupplementaryMetrics *supplementaryMetrics = [OSLayoutSupplementaryMetrics new];
+        _placeholderMetrics = supplementaryMetrics;
+    }
+    return _placeholderMetrics;
+}
+
+
 #pragma mark - AAPLContentLoading methods
 
 - (AAPLLoadableContentStateMachine *)stateMachine
