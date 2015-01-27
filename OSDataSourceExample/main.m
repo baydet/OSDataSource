@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "OSManagedCollectionView.h"
+#import "OSPlaceholderFlowLayout.h"
 
 int main(int argc, char * argv[]) {
+    [OSManagedCollectionView class];
+    [OSPlaceholderFlowLayout class];
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

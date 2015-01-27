@@ -6,6 +6,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class OSDataSource;
+
 
 @interface SegmentedDSViewController : UIViewController
 @end
