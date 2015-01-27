@@ -54,7 +54,7 @@
         for (int i = 0; i < dataSource.numberOfSections; ++i)
         {
             OSDataSource *localDataSource = [dataSource dataSourceForSectionAtIndex:i];
-            if (localDataSource.shouldDisplayPlaceholder && localDataSource.placeholderMetrics != nil && [dataSource collectionView:self.collectionView numberOfItemsInSection:i] == 0)
+            if (localDataSource.shouldDisplayPlaceholder && [dataSource collectionView:self.collectionView numberOfItemsInSection:i] == 0)
             {
                 self.shouldInsertPlaceholder = YES;
                 RPlaceholderLayoutAttributes *attributes = [RPlaceholderLayoutAttributes layoutAttributesForSupplementaryViewOfKind:RCollectionElementKindPlaceholder withIndexPath:[NSIndexPath indexPathForItem:0 inSection:i]];

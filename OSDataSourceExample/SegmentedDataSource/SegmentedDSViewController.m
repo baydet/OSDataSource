@@ -35,4 +35,10 @@
     [self.dataSource setSelectedDataSourceIndex:self.segmentedControl.selectedSegmentIndex animated:YES];
 }
 
+- (IBAction)refreshContent:(id)sender
+{
+    [self.dataSource loadContent];
+}
+
+
 @end

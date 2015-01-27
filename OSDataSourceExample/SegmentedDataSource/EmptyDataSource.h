@@ -9,4 +9,5 @@
 
 
 @interface EmptyDataSource : OSSimpleDataSource
+@property(nonatomic) int flag;
 @end
