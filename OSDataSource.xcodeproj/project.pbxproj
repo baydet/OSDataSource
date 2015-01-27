@@ -17,9 +17,9 @@
 		86732A4C1A6549020025E3D5 /* OSDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 86732A4B1A6549020025E3D5 /* OSDataSourceTest.m */; };
 		86732A4E1A654B720025E3D5 /* OSStateMachineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 86732A4D1A654B720025E3D5 /* OSStateMachineTest.m */; };
 		86732A4F1A655C5D0025E3D5 /* E1DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EEA59D99CC5FC7F381A /* E1DataSource.m */; };
-		86732A501A655C700025E3D5 /* libOSDataSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCA5AD9AA1F404DC7BA6F4C /* libOSDataSource.a */; };
 		86732A511A6650920025E3D5 /* RSegmentedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5E06530FA2DA82911CBB /* RSegmentedDataSource.m */; };
 		86732A521A6650C10025E3D5 /* SegmentedDSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA550EE3AA1EACC1B2E523 /* SegmentedDSViewController.m */; };
+		86FB8EEE1A77AD87002B2DCE /* libOSDataSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCA5AD9AA1F404DC7BA6F4C /* libOSDataSource.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		ACCA50C2FCA1FD5DA3A3E40D /* AAPLLayoutMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55AEA0B9F2D38A26113E /* AAPLLayoutMetrics.m */; };
 		ACCA526D9FB660BD4DF6CE07 /* OSPlaceholderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA515B95B5824994D47D39 /* OSPlaceholderFlowLayout.m */; };
 		ACCA531EC419B34CA8B356A8 /* RHeadersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D282DCE383E6DD0E836 /* RHeadersDataSource.m */; };
@@ -136,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86732A501A655C700025E3D5 /* libOSDataSource.a in Frameworks */,
+				86FB8EEE1A77AD87002B2DCE /* libOSDataSource.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +597,7 @@
 				);
 				INFOPLIST_FILE = OSDataSourceExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -608,6 +609,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = OSDataSourceExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

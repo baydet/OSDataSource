@@ -16,6 +16,7 @@
 {
 
 }
+
 - (instancetype)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
 {
     self = [super init];
@@ -230,5 +231,10 @@
     }
     _sectionChanges = nil;
     _objectChanges = nil;
+}
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.delegate getNumberOfItemsInCollectionViewInSection:0 forDataSource:self];
 }
 @end

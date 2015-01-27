@@ -815,13 +815,6 @@
     return view;
 }
 
-#pragma mark - NSFetchedResultsControllerDelegate methods
-
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
-{
-    [self.delegate getNumberOfItemsInCollectionViewInSection:0 forDataSource:self];
-}
-
 #pragma mark - Managing collection rows methods
 
 - (BOOL)enabledUpdatesForDataSource:(OSDataSource *)dataSource indexPaths:(NSArray *)paths changeType:(NSFetchedResultsChangeType)type

@@ -19,7 +19,7 @@
 @end
 
 //todo solve problem when owner (viewController) is removed from stack but not deallocated. It still receives messages from dataSource for updating collectionView which already deallocated.
-@interface OSDataSource : NSObject <UICollectionViewDataSource, AAPLContentLoading, NSFetchedResultsControllerDelegate, RLocalContentUpdatesAvailabilityProtocol>
+@interface OSDataSource : NSObject <UICollectionViewDataSource, AAPLContentLoading, RLocalContentUpdatesAvailabilityProtocol>
 {
     NSMutableDictionary *_sectionMetrics;
     NSMutableArray *_checkedItems;

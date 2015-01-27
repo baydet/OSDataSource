@@ -9,7 +9,7 @@
 #import "AAPLContentLoading.h"
 
 
-@interface OSManagedDataSource : OSDataSource
+@interface OSManagedDataSource : OSDataSource <NSFetchedResultsControllerDelegate>
 {
     NSMutableArray *_sectionChanges;
     NSMutableArray *_objectChanges;
