@@ -4,11 +4,20 @@
 //
 
 #import "OSManagedCollectionView.h"
+#import "OSPlaceholderFlowLayout.h"
 
 
 @implementation OSManagedCollectionView
 
 #pragma mark - RDataSourceDelegate methods
+
++ (instancetype)collectionViewWithFlowLayoutWithScrollDirection:(UICollectionViewScrollDirection)scrollDirection
+{
+    OSPlaceholderFlowLayout *flowLayout = [OSPlaceholderFlowLayout new];
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    OSManagedCollectionView *collectionView = [[OSManagedCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    return collectionView;
+}
 
 - (void)dataSource:(OSDataSource *)dataSource didRemoveItemsAtIndexPaths:(NSArray *)indexPaths
 {

@@ -8,4 +8,6 @@
 
 @interface OSManagedCollectionView : UICollectionView <RDataSourceDelegate>
 
++ (instancetype)collectionViewWithFlowLayoutWithScrollDirection:(UICollectionViewScrollDirection)scrollDirection;
+
 @end
