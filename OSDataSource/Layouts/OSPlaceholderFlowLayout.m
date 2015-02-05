@@ -36,7 +36,15 @@
     CGSize size = [super collectionViewContentSize];
     for (RPlaceholderLayoutAttributes *attr in self.placeholderMetrics)
     {
-        size.height += attr.size.height;
+        switch (self.scrollDirection)
+        {
+            case UICollectionViewScrollDirectionVertical:
+                size.height += attr.size.height;
+                break;
+            case UICollectionViewScrollDirectionHorizontal:
+                size.width += attr.size.width;
+                break;
+        }
     }
     return size;
 }
