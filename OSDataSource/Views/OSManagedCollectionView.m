@@ -14,7 +14,7 @@
 + (instancetype)collectionViewWithFlowLayoutWithScrollDirection:(UICollectionViewScrollDirection)scrollDirection
 {
     OSPlaceholderFlowLayout *flowLayout = [OSPlaceholderFlowLayout new];
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    flowLayout.scrollDirection = scrollDirection;
     OSManagedCollectionView *collectionView = [[OSManagedCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     return collectionView;
 }
