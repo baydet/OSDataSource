@@ -66,7 +66,8 @@
             {
                 self.shouldInsertPlaceholder = YES;
                 RPlaceholderLayoutAttributes *attributes = [RPlaceholderLayoutAttributes layoutAttributesForSupplementaryViewOfKind:RCollectionElementKindPlaceholder withIndexPath:[NSIndexPath indexPathForItem:0 inSection:i]];
-                attributes.frame = CGRectMake(0, 0, self.collectionView.frame.size.width - self.collectionView.contentInset.left - self.collectionView.contentInset.right, localDataSource.placeholderMetrics.height);
+                const CGFloat height = localDataSource.placeholderMetrics.height > 0 ? localDataSource.placeholderMetrics.height : CGRectGetHeight(self.collectionView.bounds);
+                attributes.frame = CGRectMake(0, 0, self.collectionView.frame.size.width - self.collectionView.contentInset.left - self.collectionView.contentInset.right, height);
                 [self.placeholderMetrics addObject:attributes];
             }
         }
