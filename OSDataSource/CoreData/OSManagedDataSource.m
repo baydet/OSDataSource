@@ -17,6 +17,11 @@
 
 }
 
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.fetchedResultsController objectAtIndexPath:indexPath];
+}
+
 - (instancetype)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
 {
     self = [super init];
