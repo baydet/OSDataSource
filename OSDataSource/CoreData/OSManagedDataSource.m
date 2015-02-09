@@ -22,6 +22,18 @@
     return [self.fetchedResultsController objectAtIndexPath:indexPath];
 }
 
+- (NSInteger)numberOfSections
+{
+    return self.fetchedResultsController.sections.count;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[(NSUInteger) section];
+    return sectionInfo.numberOfObjects;
+}
+
+
 - (instancetype)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
 {
     self = [super init];
