@@ -9,7 +9,7 @@
 
 @interface OSSimpleDataSource : OSDataSource
 
-@property(readonly) NSArray *objects;
+@property(nonatomic, strong) NSArray *objects;
 
 - (instancetype)initWithObjects:(NSArray *)objects;
 - (void)loadContentWithObjects:(NSArray *)objects;

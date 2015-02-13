@@ -7,7 +7,6 @@
 
 
 @interface OSSimpleDataSource ()
-@property(readwrite) NSArray *objects;
 @end
 
 @implementation OSSimpleDataSource
@@ -62,5 +61,12 @@
 {
     return self.objects.count;
 }
+
+- (void)setObjects:(NSArray *)objects
+{
+    _objects = objects;
+    [self notifyDidReloadData];
+}
+
 
 @end
