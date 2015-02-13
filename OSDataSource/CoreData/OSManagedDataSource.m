@@ -40,6 +40,7 @@
     if (self)
     {
         _fetchedResultsController = fetchedResultsController;
+        _fetchedResultsController.delegate = self;
         _sectionChanges = [NSMutableArray array];
         _objectChanges = [NSMutableArray array];
     }
