@@ -7,7 +7,7 @@
 #import "OSDataSource.h"
 
 
-@interface RHeadersDataSource : OSDataSource
+@interface OSHeadersDataSource : OSDataSource
 
 - (OSLayoutSupplementaryMetrics *)addHeader;
 

@@ -3,10 +3,10 @@
 // Copyright (c) 2014 baydet. All rights reserved.
 //
 
-#import "RHeadersDataSource.h"
+#import "OSHeadersDataSource.h"
 
 
-@implementation RHeadersDataSource
+@implementation OSHeadersDataSource
 
 - (NSInteger)numberOfSections
 {
