@@ -246,6 +246,15 @@
     return [dataSource collectionView:wrapper sizeForHeaderFittingSize:size atSectionIndex:localSection];
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView sizeForFooterFittingSize:(CGSize)size atSectionIndex:(NSUInteger)sectionIndex
+{
+    AAPLComposedMapping *mapping = [self mappingForGlobalSection:sectionIndex];
+    UICollectionView *wrapper = [AAPLComposedViewWrapper wrapperForView:collectionView mapping:mapping];
+    OSDataSource *dataSource = mapping.dataSource;
+    NSUInteger localSection = [mapping localSectionForGlobalSection:sectionIndex];
+
+    return [dataSource collectionView:wrapper sizeForFooterFittingSize:size atSectionIndex:localSection];
+}
 
 #pragma mark - AAPLContentLoading
 

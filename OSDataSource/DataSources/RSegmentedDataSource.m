@@ -223,6 +223,11 @@ NSString *const RSegmentedDataSourceHeaderKey = @"RSegmentedDataSourceHeaderKey"
     return [_selectedDataSource collectionView:nil sizeForHeaderFittingSize:size atSectionIndex:sectionIndex];
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionVIew sizeForFooterFittingSize:(CGSize)size atSectionIndex:(NSUInteger)sectionIndex
+{
+    return [_selectedDataSource collectionView:nil sizeForFooterFittingSize:size atSectionIndex:sectionIndex];
+}
+
 
 #pragma mark - AAPLContentLoading
 
