@@ -64,6 +64,8 @@
 
 - (void)setObjects:(NSArray *)objects
 {
+    if ([objects isEqualToArray:_objects])
+        return;
     _objects = objects;
     [self notifyDidReloadData];
 }
