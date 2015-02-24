@@ -127,6 +127,7 @@
 /// Measure variable height cells. Variable height cells are not supported when there is more than one column. The goal here is to do the minimal necessary configuration to get the correct size information.
 - (CGSize)collectionView:(UICollectionView *)collectionView sizeFittingSize:(CGSize)size forItemAtIndexPath:(NSIndexPath *)indexPath;
 - (CGSize)collectionView:(UICollectionView *)collectionVIew sizeForHeaderFittingSize:(CGSize)size atSectionIndex:(NSUInteger)sectionIndex;
+- (CGSize)collectionView:(UICollectionView *)collectionVIew sizeForFooterFittingSize:(CGSize)size atSectionIndex:(NSUInteger)sectionIndex;
 
 /// Register reusable views needed by this data source
 - (void)registerReusableViewsWithCollectionView:(UICollectionView *)collectionView NS_REQUIRES_SUPER;

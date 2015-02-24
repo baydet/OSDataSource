@@ -122,6 +122,20 @@
     }
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionVIew sizeForFooterFittingSize:(CGSize)size atSectionIndex:(NSUInteger)sectionIndex
+{
+    OSLayoutSectionMetrics *metrics = _sectionMetrics[@(sectionIndex)];
+    OSLayoutSupplementaryMetrics *metrics1 = [metrics.footers firstObject];
+    if (metrics1 == nil)
+        return CGSizeZero;
+    else
+    {
+        CGFloat height = metrics1.height;
+        return CGSizeMake(size.width, height);
+    }
+}
+
+
 - (OSLayoutSupplementaryMetrics *)placeholderMetrics
 {
     if (!_placeholderMetrics)
