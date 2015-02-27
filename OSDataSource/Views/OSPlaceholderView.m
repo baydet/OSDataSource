@@ -16,10 +16,10 @@
 @interface OSPlaceholderView ()
 @property(nonatomic, strong) UIView *containerView;
 @property(nonatomic, strong) UIImageView *imageView;
-@property(nonatomic, strong) UILabel *titleLabel;
-@property(nonatomic, strong) UILabel *messageLabel;
 @property(nonatomic, strong) UIButton *actionButton;
 @property(nonatomic, strong) NSArray *constraints;
+@property(nonatomic, strong, readwrite) UILabel *titleLabel;
+@property(nonatomic, strong, readwrite) UILabel *messageLabel;
 @end
 
 @implementation OSPlaceholderView
