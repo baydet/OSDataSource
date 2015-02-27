@@ -122,7 +122,6 @@
 @property(nonatomic, readonly) BOOL obscuredByPlaceholder;
 
 @property(nonatomic, readonly) NSArray *selectedItems;
-@property(nonatomic, strong, readonly) AAPLCollectionPlaceholderView *placeholderView;
 
 #pragma mark - Subclass hooks
 
