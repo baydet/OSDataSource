@@ -18,8 +18,8 @@
 @property(nonatomic, strong) UIImageView *imageView;
 @property(nonatomic, strong) UIButton *actionButton;
 @property(nonatomic, strong) NSArray *constraints;
-@property(nonatomic, strong, readwrite) UILabel *titleLabel;
-@property(nonatomic, strong, readwrite) UILabel *messageLabel;
+@property(nonatomic, strong) UILabel *titleLabel;
+@property(nonatomic, strong) UILabel *messageLabel;
 @end
 
 @implementation OSPlaceholderView
@@ -299,7 +299,7 @@
 
 @interface AAPLCollectionPlaceholderView ()
 @property(nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
-@property(nonatomic, strong, readwrite) OSPlaceholderView *placeholderView;
+@property(nonatomic, strong) OSPlaceholderView *placeholderView;
 @end
 
 @implementation AAPLCollectionPlaceholderView
@@ -368,6 +368,8 @@
     self.placeholderView = [[OSPlaceholderView alloc] initWithFrame:CGRectZero title:title message:message image:image buttonTitle:nil buttonAction:nil];
     _placeholderView.alpha = 0.0;
     _placeholderView.translatesAutoresizingMaskIntoConstraints = NO;
+    _placeholderView.titleLabel.font = self.titleFont;
+    _placeholderView.messageLabel.font = self.messageFont;
     [self addSubview:_placeholderView];
 
     NSMutableArray *constraints = [NSMutableArray array];

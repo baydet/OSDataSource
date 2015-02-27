@@ -15,8 +15,6 @@
 @property(nonatomic, copy) NSString *message;
 @property(nonatomic, copy) NSString *buttonTitle;
 @property(nonatomic, copy) void (^buttonAction)(void);
-@property(nonatomic, strong, readonly) UILabel *titleLabel;
-@property(nonatomic, strong, readonly) UILabel *messageLabel;
 
 /// Initialize a placeholder view. A message is required in order to display a button.
 - (instancetype)initWithFrame:(CGRect)frame title:(NSString *)title message:(NSString *)message image:(UIImage *)image buttonTitle:(NSString *)buttonTitle buttonAction:(dispatch_block_t)buttonAction;
@@ -26,7 +24,8 @@
 /// A placeholder view for use in the collection view. This placeholder includes the loading indicator.
 @interface AAPLCollectionPlaceholderView : UICollectionReusableView
 
-@property(nonatomic, strong, readonly) OSPlaceholderView *placeholderView;
+@property(nonatomic, strong) UIFont *titleFont;
+@property(nonatomic, strong) UIFont *messageFont;
 
 - (void)showActivityIndicator:(BOOL)show;
 
