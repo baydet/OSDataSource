@@ -26,6 +26,8 @@
 /// A placeholder view for use in the collection view. This placeholder includes the loading indicator.
 @interface AAPLCollectionPlaceholderView : UICollectionReusableView
 
+@property(nonatomic, strong, readonly) OSPlaceholderView *placeholderView;
+
 - (void)showActivityIndicator:(BOOL)show;
 
 - (void)showPlaceholderWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image animated:(BOOL)animated;

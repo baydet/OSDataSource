@@ -122,6 +122,8 @@
 @property(nonatomic, readonly) BOOL obscuredByPlaceholder;
 
 @property(nonatomic, readonly) NSArray *selectedItems;
+@property(nonatomic, strong, readonly) AAPLCollectionPlaceholderView *placeholderView;
+
 #pragma mark - Subclass hooks
 
 /// Measure variable height cells. Variable height cells are not supported when there is more than one column. The goal here is to do the minimal necessary configuration to get the correct size information.

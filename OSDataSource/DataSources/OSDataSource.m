@@ -17,7 +17,7 @@
 @property(nonatomic, strong) NSMutableArray *headers;
 @property(nonatomic, strong) NSMutableDictionary *headersByKey;
 @property(nonatomic, strong) AAPLLoadableContentStateMachine *stateMachine;
-@property(nonatomic, strong) AAPLCollectionPlaceholderView *placeholderView;
+@property(nonatomic, strong, readwrite) AAPLCollectionPlaceholderView *placeholderView;
 @property(nonatomic, copy) dispatch_block_t pendingUpdateBlock;
 @property(nonatomic) BOOL loadingComplete;
 @property(nonatomic, weak) AAPLLoading *loadingInstance;

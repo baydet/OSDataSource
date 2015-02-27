@@ -299,7 +299,7 @@
 
 @interface AAPLCollectionPlaceholderView ()
 @property(nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
-@property(nonatomic, strong) OSPlaceholderView *placeholderView;
+@property(nonatomic, strong, readwrite) OSPlaceholderView *placeholderView;
 @end
 
 @implementation AAPLCollectionPlaceholderView
