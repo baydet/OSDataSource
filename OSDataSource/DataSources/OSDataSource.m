@@ -303,7 +303,7 @@
 
 - (void)didEnterFirstTimeLoad
 {
-    [self updatePlaceholder:self.placeholderView atSectionIndex:0 notifyVisibility:YES];
+    [self updatePlaceholder:self.placeholderView atSectionIndex:0 notifyVisibility:NO];
 }
 
 - (void)didEnterNoContentState
@@ -564,14 +564,6 @@
 - (void)notifyItemsInsertedAtIndexPaths:(NSArray *)insertedIndexPaths
 {
     OS_ASSERT_MAIN_THREAD;
-    if (self.shouldDisplayPlaceholder)
-    {
-        __weak typeof(&*self) weakself = self;
-        [self enqueuePendingUpdateBlock:^{
-            [weakself notifyItemsInsertedAtIndexPaths:insertedIndexPaths];
-        }];
-        return;
-    }
 
     id <RDataSourceDelegate> delegate = self.delegate;
     if ([delegate respondsToSelector:@selector(dataSource:didInsertItemsAtIndexPaths:)])
@@ -583,14 +575,6 @@
 - (void)notifyItemsRemovedAtIndexPaths:(NSArray *)removedIndexPaths
 {
     OS_ASSERT_MAIN_THREAD;
-    if (self.shouldDisplayPlaceholder)
-    {
-        __weak typeof(&*self) weakself = self;
-        [self enqueuePendingUpdateBlock:^{
-            [weakself notifyItemsRemovedAtIndexPaths:removedIndexPaths];
-        }];
-        return;
-    }
 
     id <RDataSourceDelegate> delegate = self.delegate;
     if ([delegate respondsToSelector:@selector(dataSource:didRemoveItemsAtIndexPaths:)])
@@ -602,14 +586,6 @@
 - (void)notifyItemsRefreshedAtIndexPaths:(NSArray *)refreshedIndexPaths
 {
     OS_ASSERT_MAIN_THREAD;
-    if (self.shouldDisplayPlaceholder)
-    {
-        __weak typeof(&*self) weakself = self;
-        [self enqueuePendingUpdateBlock:^{
-            [weakself notifyItemsRefreshedAtIndexPaths:refreshedIndexPaths];
-        }];
-        return;
-    }
 
     id <RDataSourceDelegate> delegate = self.delegate;
     if ([delegate respondsToSelector:@selector(dataSource:didRefreshItemsAtIndexPaths:)])
@@ -621,14 +597,6 @@
 - (void)notifyItemMovedFromIndexPath:(NSIndexPath *)indexPath toIndexPaths:(NSIndexPath *)newIndexPath
 {
     OS_ASSERT_MAIN_THREAD;
-    if (self.shouldDisplayPlaceholder)
-    {
-        __weak typeof(&*self) weakself = self;
-        [self enqueuePendingUpdateBlock:^{
-            [weakself notifyItemMovedFromIndexPath:indexPath toIndexPaths:newIndexPath];
-        }];
-        return;
-    }
 
     id <RDataSourceDelegate> delegate = self.delegate;
     if ([delegate respondsToSelector:@selector(dataSource:didMoveItemAtIndexPath:toIndexPath:)])
