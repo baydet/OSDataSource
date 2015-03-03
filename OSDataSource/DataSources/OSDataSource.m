@@ -313,7 +313,7 @@
 
 - (void)didEnterErrorState
 {
-    [self updatePlaceholder:self.placeholderView atSectionIndex:0 notifyVisibility:YES];
+    [self updatePlaceholder:self.placeholderView atSectionIndex:0 notifyVisibility:self.shouldReloadSection];
 }
 
 #pragma mark - UICollectionView metrics
