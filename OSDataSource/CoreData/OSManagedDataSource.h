@@ -11,8 +11,8 @@
 
 @interface OSManagedDataSource : OSDataSource <NSFetchedResultsControllerDelegate>
 {
-    NSMutableArray *_sectionChanges;
-    NSMutableArray *_objectChanges;
+    NSMutableDictionary *_sectionChanges;
+    NSMutableDictionary *_objectChanges;
 }
 
 @property(nonatomic, readonly) NSFetchedResultsController *fetchedResultsController;

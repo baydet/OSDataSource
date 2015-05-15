@@ -403,7 +403,7 @@
     NSIndexPath *globalFromIndexPath = [mapping globalIndexPathForLocalIndexPath:fromIndexPath];
     NSIndexPath *globalNewIndexPath = [mapping globalIndexPathForLocalIndexPath:newIndexPath];
 
-    [self notifyItemMovedFromIndexPath:globalFromIndexPath toIndexPaths:globalNewIndexPath];
+    [self notifyItemMovedFromIndexPath:globalFromIndexPath toIndexPath:globalNewIndexPath];
 }
 
 - (void)dataSource:(OSDataSource *)dataSource didInsertSections:(NSIndexSet *)sections direction:(AAPLDataSourceSectionOperationDirection)direction

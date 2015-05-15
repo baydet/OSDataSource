@@ -4,7 +4,6 @@
 //
 
 #import "RDataSource_Private.h"
-#import "AAPLContentLoading.h"
 #import "OSManagedDataSource.h"
 
 @interface OSManagedDataSource()
@@ -41,8 +40,8 @@
     {
         _fetchedResultsController = fetchedResultsController;
         _fetchedResultsController.delegate = self;
-        _sectionChanges = [NSMutableArray array];
-        _objectChanges = [NSMutableArray array];
+        _objectChanges = [NSMutableDictionary dictionary];
+        _sectionChanges = [NSMutableDictionary dictionary];
     }
 
     return self;
@@ -58,7 +57,7 @@
 {
     if ([self.fetchUpdatesAvailableDelegate enabledUpdatesForDataSource:self indexPaths:nil changeType:type])
     {
-        [self didChangeSectionAtIndex:sectionIndex type:type sectionChanges:_sectionChanges];
+        [self didChangeSectionAtIndex:sectionIndex type:type];
     }
 }
 
@@ -71,164 +70,147 @@
         [marr addObject:newIndexPath];
     if ([self.fetchUpdatesAvailableDelegate enabledUpdatesForDataSource:self indexPaths:marr changeType:type])
     {
-        [self didChangeObjectAtIndexPath:indexPath type:type newIndexPath:newIndexPath objectChangesArray:_objectChanges];
+        [self didChangeObjectAtIndexPath:indexPath type:type newIndexPath:newIndexPath];
     }
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    if ([self.fetchUpdatesAvailableDelegate enabledUpdatesForDataSource:self indexPaths:nil changeType:0])
+    if ([self.fetchUpdatesAvailableDelegate enabledUpdatesForDataSource:self indexPaths:nil changeType:NSFetchedResultsChangeDelete])
     {
-        [self didChangeContentWithSectionChanges:_sectionChanges objectChanges:_objectChanges];
+        [self didChangeContent];
     }
 }
 
-- (void)didChangeSectionAtIndex:(NSUInteger)sectionIndex type:(NSFetchedResultsChangeType)type sectionChanges:(NSMutableArray *)sectionChanges
+- (void)didChangeSectionAtIndex:(NSUInteger)sectionIndex type:(NSFetchedResultsChangeType)type
 {
-    NSMutableDictionary *change = [NSMutableDictionary new];
-    switch (type)
+    if (type == NSFetchedResultsChangeInsert || type == NSFetchedResultsChangeDelete)
     {
+        NSMutableIndexSet *changeSet = _sectionChanges[@(type)];
+        if (changeSet != nil) {
+            [changeSet addIndex:sectionIndex];
+        } else {
+            _sectionChanges[@(type)] = [[NSMutableIndexSet alloc] initWithIndex:sectionIndex];
+        }
+    }
+}
+
+- (void)didChangeObjectAtIndexPath:(NSIndexPath *)indexPath type:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    NSMutableArray *changeSet = _objectChanges[@(type)];
+    if (changeSet == nil) {
+        changeSet = [[NSMutableArray alloc] init];
+        _objectChanges[@(type)] = changeSet;
+    }
+
+    switch(type) {
         case NSFetchedResultsChangeInsert:
-            change[@(type)] = @(sectionIndex);
+            [changeSet addObject:newIndexPath];
             break;
         case NSFetchedResultsChangeDelete:
-            change[@(type)] = @(sectionIndex);
-            break;
-        case NSFetchedResultsChangeMove:
+            [changeSet addObject:indexPath];
             break;
         case NSFetchedResultsChangeUpdate:
-            break;
-    }
-    [sectionChanges addObject:change];
-}
-
-- (void)didChangeObjectAtIndexPath:(NSIndexPath *)indexPath type:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath objectChangesArray:(NSMutableArray *)array
-{
-    NSMutableDictionary *change = [NSMutableDictionary new];
-    switch (type)
-    {
-        case NSFetchedResultsChangeInsert:
-            change[@(type)] = newIndexPath;
-            break;
-        case NSFetchedResultsChangeDelete:
-            change[@(type)] = indexPath;
-            break;
-        case NSFetchedResultsChangeUpdate:
-            change[@(type)] = indexPath;
+            [changeSet addObject:indexPath];
             break;
         case NSFetchedResultsChangeMove:
-            change[@(type)] = @[indexPath, newIndexPath];
-            change[@(NSFetchedResultsChangeUpdate)] = indexPath;
+            [changeSet addObject:@[indexPath, newIndexPath]];
             break;
     }
-    [array addObject:change];
 }
 
-- (void)didChangeContentWithSectionChanges:(NSMutableArray *)sectionChanges objectChanges:(NSMutableArray *)objectChanges
+- (void)didChangeContent
 {
-    NSMutableArray *objectChangesCopy = [objectChanges copy];
-    NSMutableArray *sectionChangesCopy = [sectionChanges copy];
+    NSMutableArray *moves = _objectChanges[@(NSFetchedResultsChangeMove)];
+    if (moves.count > 0) {
+        NSMutableArray *updatedMoves = [[NSMutableArray alloc] initWithCapacity:moves.count];
 
-    if ([sectionChangesCopy count] > 0)
-    {
-        [self notifyBatchUpdate:^{
-            for (NSDictionary *change in sectionChangesCopy)
-            {
-                [change enumerateKeysAndObjectsUsingBlock:^(NSNumber *key, id obj, BOOL *stop) {
+        NSMutableIndexSet *insertSections = _sectionChanges[@(NSFetchedResultsChangeInsert)];
+        NSMutableIndexSet *deleteSections = _sectionChanges[@(NSFetchedResultsChangeDelete)];
+        for (NSArray *move in moves) {
+            NSIndexPath *fromIP = move[0];
+            NSIndexPath *toIP = move[1];
 
-                    NSFetchedResultsChangeType type = [key unsignedIntegerValue];
-                    switch (type)
-                    {
-                        case NSFetchedResultsChangeInsert:
-                            [self notifySectionsInserted:[NSIndexSet indexSetWithIndex:[obj unsignedIntegerValue]]];
-                            break;
-                        case NSFetchedResultsChangeDelete:
-                            [self notifySectionsRemoved:[NSIndexSet indexSetWithIndex:[obj unsignedIntegerValue]]];
-                            break;
-                        case NSFetchedResultsChangeUpdate:
-                            [self notifySectionsRefreshed:[NSIndexSet indexSetWithIndex:[obj unsignedIntegerValue]]];
-                            break;
-                        case NSFetchedResultsChangeMove:
-                            break;
+            if ([deleteSections containsIndex:(NSUInteger) fromIP.section]) {
+                if (![insertSections containsIndex:(NSUInteger) toIP.section]) {
+                    NSMutableArray *changeSet = _objectChanges[@(NSFetchedResultsChangeInsert)];
+                    if (changeSet == nil) {
+                        changeSet = [@[toIP] mutableCopy];
+                        _objectChanges[@(NSFetchedResultsChangeInsert)] = changeSet;
+                    } else {
+                        [changeSet addObject:toIP];
                     }
-                }];
-            }
-        }];
-    }
-
-    if ([objectChangesCopy count] > 0 && [sectionChangesCopy count] == 0)
-    {
-
-        if ([self shouldReloadCollectionViewToPreventKnownIssue:objectChangesCopy])
-        {
-            // This is to prevent a bug in UICollectionView from occurring.
-            // The bug presents itself when inserting the first object or deleting the last object in a collection view.
-            // http://stackoverflow.com/questions/12611292/uicollectionview-assertion-failure
-            // This code should be removed once the bug has been fixed, it is tracked in OpenRadar
-            // http://openradar.appspot.com/12954582
-            [self notifyDidReloadData];
-
-        } else
-        {
-            [self notifyBatchUpdate:^{
-
-                for (NSDictionary *change in objectChangesCopy)
-                {
-                    [change enumerateKeysAndObjectsUsingBlock:^(NSNumber *key, id obj, BOOL *stop) {
-
-                        NSFetchedResultsChangeType type = [key unsignedIntegerValue];
-                        switch (type)
-                        {
-                            case NSFetchedResultsChangeInsert:
-                                [self notifyItemsInsertedAtIndexPaths:@[obj]];
-                                break;
-                            case NSFetchedResultsChangeDelete:
-                                [self notifyItemsRemovedAtIndexPaths:@[obj]];
-                                break;
-                            case NSFetchedResultsChangeUpdate:
-                                [self notifyItemsRefreshedAtIndexPaths:@[obj]];
-                                break;
-                            case NSFetchedResultsChangeMove:
-                                [self notifyItemMovedFromIndexPath:obj[0] toIndexPaths:obj[1]];
-                                break;
-                        }
-                    }];
                 }
-            }];
+            } else if ([insertSections containsIndex:(NSUInteger) toIP.section]) {
+                NSMutableArray *changeSet = _objectChanges[@(NSFetchedResultsChangeDelete)];
+                if (changeSet == nil) {
+                    changeSet = [@[fromIP] mutableCopy];
+                    _objectChanges[@(NSFetchedResultsChangeDelete)] = changeSet;
+                } else {
+                    [changeSet addObject:fromIP];
+                }
+            } else {
+                [updatedMoves addObject:move];
+            }
+        }
+
+        if (updatedMoves.count > 0) {
+            _objectChanges[@(NSFetchedResultsChangeMove)] = updatedMoves;
+        } else {
+            [_objectChanges removeObjectForKey:@(NSFetchedResultsChangeMove)];
         }
     }
 
-    [sectionChanges removeAllObjects];
-    [objectChanges removeAllObjects];
-}
-
-- (BOOL)shouldReloadCollectionViewToPreventKnownIssue:(NSArray *)objectChanges
-{
-    __block BOOL shouldReload = NO;
-    for (NSDictionary *change in objectChanges)
-    {
-        [change enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-            NSFetchedResultsChangeType type = [key unsignedIntegerValue];
-            NSIndexPath *indexPath = obj;
-            switch (type)
-            {
-                case NSFetchedResultsChangeInsert:
-                    shouldReload = [self.delegate getNumberOfItemsInCollectionViewInSection:indexPath.section forDataSource:self] == 0;
-                    break;
-                case NSFetchedResultsChangeDelete:
-                    shouldReload = [self.delegate getNumberOfItemsInCollectionViewInSection:indexPath.section forDataSource:self] == 1;
-                    break;
-                case NSFetchedResultsChangeUpdate:
-                    shouldReload = NO;
-                    break;
-                case NSFetchedResultsChangeMove:
-                    shouldReload = NO;
-                    break;
-            }
-        }];
+    NSMutableArray *deletes = _objectChanges[@(NSFetchedResultsChangeDelete)];
+    if (deletes.count > 0) {
+        NSMutableIndexSet *deletedSections = _sectionChanges[@(NSFetchedResultsChangeDelete)];
+        [deletes filterUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(NSIndexPath *evaluatedObject, NSDictionary *bindings) {
+            return ![deletedSections containsIndex:(NSUInteger) evaluatedObject.section];
+        }]];
     }
 
-    return shouldReload;
+    NSMutableArray *inserts = _objectChanges[@(NSFetchedResultsChangeInsert)];
+    if (inserts.count > 0) {
+        NSMutableIndexSet *insertedSections = _sectionChanges[@(NSFetchedResultsChangeInsert)];
+        [inserts filterUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(NSIndexPath *evaluatedObject, NSDictionary *bindings) {
+            return ![insertedSections containsIndex:(NSUInteger) evaluatedObject.section];
+        }]];
+    }
+
+    [self notifyBatchUpdate:^{
+        NSIndexSet *deletedSections = _sectionChanges[@(NSFetchedResultsChangeDelete)];
+        if (deletedSections.count > 0) {
+            [self notifySectionsRemoved:deletedSections];
+        }
+
+        NSIndexSet *insertedSections = _sectionChanges[@(NSFetchedResultsChangeInsert)];
+        if (insertedSections.count > 0) {
+            [self notifySectionsInserted:insertedSections];
+        }
+
+        NSArray *deletedItems = _objectChanges[@(NSFetchedResultsChangeDelete)];
+        if (deletedItems.count > 0) {
+            [self notifyItemsRemovedAtIndexPaths:deletedItems];
+        }
+
+        NSArray *insertedItems = _objectChanges[@(NSFetchedResultsChangeInsert)];
+        if (insertedItems.count > 0) {
+            [self notifyItemsInsertedAtIndexPaths:insertedItems];
+        }
+
+        NSArray *reloadItems = _objectChanges[@(NSFetchedResultsChangeUpdate)];
+        if (reloadItems.count > 0) {
+            [self notifyItemsRefreshedAtIndexPaths:reloadItems];
+        }
+
+        NSArray *moveItems = _objectChanges[@(NSFetchedResultsChangeMove)];
+        for (NSArray *paths in moveItems) {
+            [self notifyItemMovedFromIndexPath:paths[0] toIndexPath:paths[1]];
+        }
+    }];
+
+    _objectChanges = nil;
+    _sectionChanges = nil;
 }
 
 - (void)unlockFRCAtSectionIndex:(NSInteger)index
@@ -237,8 +219,8 @@
     {
         [self.delegate dataSource:self didUnlockFRCAtSectionIndex:index];
     }
-    _sectionChanges = [NSMutableArray array];
-    _objectChanges = [NSMutableArray array];
+    _sectionChanges = [NSMutableDictionary new];
+    _objectChanges = [NSMutableDictionary new];
 }
 
 - (void)lockFRCAtSectionIndex:(NSInteger)index
@@ -254,5 +236,8 @@
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
     [self.delegate getNumberOfItemsInCollectionViewInSection:0 forDataSource:self];
+    _objectChanges = [NSMutableDictionary dictionary];
+    _sectionChanges = [NSMutableDictionary dictionary];
 }
+
 @end

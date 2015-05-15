@@ -59,7 +59,7 @@
 
 - (void)notifyItemsRefreshedAtIndexPaths:(NSArray *)refreshedIndexPaths;
 
-- (void)notifyItemMovedFromIndexPath:(NSIndexPath *)indexPath toIndexPaths:(NSIndexPath *)newIndexPath;
+- (void)notifyItemMovedFromIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)newIndexPath;
 
 - (void)notifySectionsInserted:(NSIndexSet *)sections;
 

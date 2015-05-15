@@ -376,7 +376,7 @@ NSString *const RSegmentedDataSourceHeaderKey = @"RSegmentedDataSourceHeaderKey"
     if (dataSource != _selectedDataSource)
         return;
 
-    [self notifyItemMovedFromIndexPath:fromIndexPath toIndexPaths:newIndexPath];
+    [self notifyItemMovedFromIndexPath:fromIndexPath toIndexPath:newIndexPath];
 }
 
 - (void)dataSource:(OSDataSource *)dataSource didInsertSections:(NSIndexSet *)sections direction:(AAPLDataSourceSectionOperationDirection)direction
