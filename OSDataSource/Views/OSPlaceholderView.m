@@ -400,6 +400,13 @@
     }
 }
 
+- (void)setAlpha:(CGFloat)alpha
+{
+    [super setAlpha:alpha];
+    self.activityIndicatorView.alpha = alpha;
+}
+
+
 @end
 
 

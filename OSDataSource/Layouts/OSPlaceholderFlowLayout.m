@@ -21,6 +21,8 @@
     }
 
     return self;
+
+
 }
 
 @end
@@ -230,8 +232,8 @@
         }
         if (o == nil)
         {
-            o = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:kind withIndexPath:indexPath];
-            o.frame = CGRectZero;
+            o = [RPlaceholderLayoutAttributes layoutAttributesForSupplementaryViewOfKind:kind withIndexPath:indexPath];
+            o.frame = CGRectMake(0, -CGFLOAT_MAX, self.collectionView.frame.size.width - self.collectionView.contentInset.left - self.collectionView.contentInset.right, 0);
         }
 
         return o;
