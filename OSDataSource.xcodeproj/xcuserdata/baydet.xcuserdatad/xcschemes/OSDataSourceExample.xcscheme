@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "86732A0F1A65038D0025E3D5"
+               BlueprintIdentifier = "86732A3C1A6547890025E3D5"
                BuildableName = "OSDataSourceExampleTests.xctest"
                BlueprintName = "OSDataSourceExampleTests"
                ReferencedContainer = "container:OSDataSource.xcodeproj">
@@ -37,18 +37,38 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "86732A0F1A65038D0025E3D5"
+               BlueprintIdentifier = "86732A3C1A6547890025E3D5"
                BuildableName = "OSDataSourceExampleTests.xctest"
                BlueprintName = "OSDataSourceExampleTests"
+               ReferencedContainer = "container:OSDataSource.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8628DFCA1BB7F7CB00F35196"
+               BuildableName = "OSSDataSourceTests.xctest"
+               BlueprintName = "OSSDataSourceTests"
+               ReferencedContainer = "container:OSDataSource.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8628DFED1BB7F80100F35196"
+               BuildableName = "OSSDataSourceTests.xctest"
+               BlueprintName = "OSSDataSourceTests"
                ReferencedContainer = "container:OSDataSource.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,23 +76,27 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "867329F41A65038D0025E3D5"
+            BlueprintIdentifier = "86732A211A6547890025E3D5"
             BuildableName = "OSDataSourceExample.app"
             BlueprintName = "OSDataSourceExample"
             ReferencedContainer = "container:OSDataSource.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "86732A211A6547890025E3D5"
@@ -85,15 +109,16 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "867329F41A65038D0025E3D5"
+            BlueprintIdentifier = "86732A211A6547890025E3D5"
             BuildableName = "OSDataSourceExample.app"
             BlueprintName = "OSDataSourceExample"
             ReferencedContainer = "container:OSDataSource.xcodeproj">
