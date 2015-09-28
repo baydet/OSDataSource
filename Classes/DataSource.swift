@@ -11,15 +11,6 @@ import UIKit
 
 let OSCollectionPlaceholderView = "OSCollectionPlaceholderView"
 
-enum CollectionState: Int {
-    case Initial
-    case LoadingContent
-    case RefreshingContent
-    case LoadedContent
-    case NoContent
-    case Error
-}
-
 public protocol DataSourceUpdates: class {
     func dataSource(dataSource: DataSource, didInsertItemsAtIndexPaths indexPaths: [NSIndexPath])
     func dataSource(dataSource: DataSource, didRemoveItemsAtIndexPaths indexPaths: [NSIndexPath])
@@ -32,8 +23,6 @@ public protocol DataSourceUpdates: class {
     func dataSourceDidReloadData(dataSource: DataSource)
 }
 
-
-
 public class DataSource: NSObject, UICollectionViewDataSource {
     internal let dataProvider: DataProvider
     public weak var delegate: DataSourceUpdates?
@@ -43,7 +32,7 @@ public class DataSource: NSObject, UICollectionViewDataSource {
     }
 
     public func registerReusableViewsFor(collectionView: UICollectionView) {
-        collectionView.registerClass(PlaceholderView.self, forSupplementaryViewOfKind: "asdf", withReuseIdentifier: PlaceholderView.self.description())
+        collectionView.registerClass(PlaceholderView.self, forSupplementaryViewOfKind: OSCollectionPlaceholderView, withReuseIdentifier: PlaceholderView.self.description())
     }
 
     //MARK: UICollectionViewDataSource protocol
@@ -57,6 +46,7 @@ public class DataSource: NSObject, UICollectionViewDataSource {
     }
 
     @objc public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        assert(false, "you must override cellForItemAtIndexPath in subclasses")
         return UICollectionViewCell()
     }
 }
