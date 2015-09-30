@@ -49,6 +49,14 @@ public class DataSource: NSObject, UICollectionViewDataSource {
         assert(false, "you must override cellForItemAtIndexPath in subclasses")
         return UICollectionViewCell()
     }
+
+    //MARK: placeholder logic
+
+    public var shouldDisplayPlaceholder: Bool {
+        get {
+            return false
+        }
+    }
 }
 
 

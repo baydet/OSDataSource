@@ -31,9 +31,7 @@ public class DataProvider {
 
     private var state: LoadingState = .Initial {
         willSet {
-//            guard newValue in possibleTransitions[state] else {
-//
-//            }
+            assert(possibleTransitions[state]!.contains(newValue), "cannot perform transition from \(state) to \(newValue)")
         }
     }
 
@@ -60,7 +58,5 @@ public class DefaultDataProvider: DataProvider {
         return 0
     }
 
-    override func loadContent() throws {
-    }
 
 }

@@ -37,6 +37,7 @@
 		ACCA54B469905219349757BA /* OSDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA529E66B72D9938898E09 /* OSDataSource.m */; };
 		ACCA553DF599EDB46CC9B21C /* SegmenetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EBB38BC0FA97E48CEE1 /* SegmenetDataSource.swift */; };
 		ACCA5636AE1647FA8DF101CD /* ComposedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5125ED19E3F5629A744F /* ComposedDataSource.swift */; };
+		ACCA579A53794E79150AD9C2 /* ComposedViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D66F4F3792E379AD239 /* ComposedViewWrapper.swift */; };
 		ACCA579DA7B6021AEE15E085 /* E1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55C0BD394E57811F54B1 /* E1ViewController.m */; };
 		ACCA58815F8C393F503493FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCA513762739FFF822B2E31 /* UIKit.framework */; };
 		ACCA591EAC63FB14125FD191 /* ComposedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA51BE35DC7A2C037236D1 /* ComposedViewController.m */; };
@@ -175,6 +176,7 @@
 		ACCA5CB7BC2D4D6E070D6D85 /* RComposedDataSource_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RComposedDataSource_Private.m; sourceTree = "<group>"; };
 		ACCA5D282DCE383E6DD0E836 /* OSHeadersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSHeadersDataSource.m; sourceTree = "<group>"; };
 		ACCA5D448CB5B04A118F30AF /* OSStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSStateMachine.h; sourceTree = "<group>"; };
+		ACCA5D66F4F3792E379AD239 /* ComposedViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposedViewWrapper.swift; sourceTree = "<group>"; };
 		ACCA5D6C97A1ED9E9495D0C3 /* RAlignedFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAlignedFlowLayout.m; sourceTree = "<group>"; };
 		ACCA5D713A5BF81EE7618C39 /* OSDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCA5E06530FA2DA82911CBB /* RSegmentedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSegmentedDataSource.m; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				ACCA51195AB86BDBD8F5E7CF /* PlaceholderView.swift */,
 				ACCA5EBB38BC0FA97E48CEE1 /* SegmenetDataSource.swift */,
 				ACCA5125ED19E3F5629A744F /* ComposedDataSource.swift */,
+				ACCA5D66F4F3792E379AD239 /* ComposedViewWrapper.swift */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -720,6 +723,7 @@
 				ACCA591EAC63FB14125FD191 /* ComposedViewController.m in Sources */,
 				ACCA553DF599EDB46CC9B21C /* SegmenetDataSource.swift in Sources */,
 				ACCA5636AE1647FA8DF101CD /* ComposedDataSource.swift in Sources */,
+				ACCA579A53794E79150AD9C2 /* ComposedViewWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
