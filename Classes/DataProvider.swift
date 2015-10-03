@@ -10,8 +10,16 @@ public protocol Paginable {
     func loadNextPage() -> Bool
 }
 
+public typealias LoadingCompletionBlock = (ContentLoadingCompletionState) -> Void
+
+public enum ContentLoadingCompletionState {
+    case WithContent
+    case NoContent
+    case Error(error: ErrorType)
+}
+
 public class DataProvider {
-    private enum LoadingState: Int {
+    private enum LoadingState {
         case Initial
         case LoadingContent
         case RefreshingContent
@@ -35,16 +43,28 @@ public class DataProvider {
         }
     }
 
-    func numberOfSections() -> Int {
+    private func beginLoading() {
+        state = .LoadingContent
+    }
+
+    public func numberOfSections() -> Int {
         return 0
     }
 
-    func numberOfItems(inSection section: Int) -> Int {
+    public func numberOfItems(inSection section: Int) -> Int {
         return 0
     }
 
-    func loadContent() throws {
+    public func loadContent() throws {
 
+    }
+
+    public func loadContent(completionBlock:((LoadingCompletionBlock) -> Void)) {
+        beginLoading()
+        let finishBlock: LoadingCompletionBlock = {contentState in
+            print(contentState)
+        }
+        completionBlock(finishBlock)
     }
 }
 
