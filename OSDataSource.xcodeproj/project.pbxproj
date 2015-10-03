@@ -109,7 +109,6 @@
 		8628E0071BB7F84100F35196 /* OSSDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSSDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8628E0091BB7F84100F35196 /* OSSDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSDataSource.h; sourceTree = "<group>"; };
 		8628E00B1BB7F84100F35196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8628E0191BB7F84100F35196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86732A221A6547890025E3D5 /* OSDataSourceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSDataSourceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86732A251A6547890025E3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86732A261A6547890025E3D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -236,14 +235,6 @@
 			path = OSSDataSource;
 			sourceTree = "<group>";
 		};
-		8628E0161BB7F84100F35196 /* OSSDataSourceTests */ = {
-			isa = PBXGroup;
-			children = (
-				8628E0191BB7F84100F35196 /* Info.plist */,
-			);
-			path = OSSDataSourceTests;
-			sourceTree = "<group>";
-		};
 		86732A231A6547890025E3D5 /* OSDataSourceExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,7 +276,6 @@
 			children = (
 				86732A231A6547890025E3D5 /* OSDataSourceExample */,
 				8628E0081BB7F84100F35196 /* OSSDataSource */,
-				8628E0161BB7F84100F35196 /* OSSDataSourceTests */,
 				86B9B6E01BC0637900F48423 /* OSSDataSourceTests */,
 				ACCA5A8E8AFC538CAFD149EB /* Products */,
 				ACCA5A0230AE4E71098811BB /* OSDataSource */,
