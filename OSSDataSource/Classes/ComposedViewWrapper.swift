@@ -18,11 +18,17 @@ internal struct ComposedMapping {
 }
 
 internal class ComposedWrapperCollectionView: UICollectionView {
-    private weak let collectionView: UICollectionView?
+    private weak var collectionView: UICollectionView?
     private let mapping: ComposedMapping
 
     required init(wrappedView: UICollectionView, mapping: ComposedMapping) {
         collectionView = wrappedView
+        self.mapping = mapping
+        super.init(frame: CGRectZero, collectionViewLayout: UICollectionViewLayout())
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func registerClass(cellClass: AnyClass?, forCellWithReuseIdentifier identifier: String) {

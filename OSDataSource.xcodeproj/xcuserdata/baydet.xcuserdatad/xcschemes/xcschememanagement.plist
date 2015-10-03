@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>OSSDataSourceTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -73,6 +78,11 @@
 			<true/>
 		</dict>
 		<key>86732A3C1A6547890025E3D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86B9B6DE1BC0637900F48423</key>
 		<dict>
 			<key>primary</key>
 			<true/>

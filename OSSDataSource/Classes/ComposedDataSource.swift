@@ -6,7 +6,8 @@
 import Foundation
 
 class ComposedDataSource {
-    public private(set) var dataSources: [DataSource]
+    internal private(set) var dataSources: [DataSource] = []
 
-    func addDataSource(dataSource: DataSource)
+    func addDataSource(dataSource: DataSource) {
+    }
 }

@@ -6,7 +6,8 @@
 import Foundation
 
 public class SegmenetDataSource: DataSource {
-    public private(set) var dataSources: [DataSource]
+    public private(set) var dataSources: [DataSource] = []
 
-    func addDataSource(dataSource: DataSource)
+    func addDataSource(dataSource: DataSource) {
+    }
 }

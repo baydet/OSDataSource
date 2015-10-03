@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8628E00A1BB7F84100F35196 /* OSSDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 8628E0091BB7F84100F35196 /* OSSDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8628E0111BB7F84100F35196 /* OSSDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */; settings = {ASSET_TAGS = (); }; };
-		8628E0181BB7F84100F35196 /* OSSDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628E0171BB7F84100F35196 /* OSSDataSourceTests.swift */; };
 		8628E01C1BB7F84100F35196 /* OSSDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */; };
 		8628E01D1BB7F84100F35196 /* OSSDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8628E02C1BB7F86100F35196 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628DFBB1BB7DBF600F35196 /* DataSource.swift */; settings = {ASSET_TAGS = (); }; };
@@ -21,12 +19,14 @@
 		86732A331A6547890025E3D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86732A311A6547890025E3D5 /* Main.storyboard */; };
 		86732A351A6547890025E3D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86732A341A6547890025E3D5 /* Images.xcassets */; };
 		86732A381A6547890025E3D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86732A361A6547890025E3D5 /* LaunchScreen.xib */; };
-		86732A441A6547890025E3D5 /* OSDataSourceExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86732A431A6547890025E3D5 /* OSDataSourceExampleTests.m */; };
-		86732A4C1A6549020025E3D5 /* OSDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 86732A4B1A6549020025E3D5 /* OSDataSourceTest.m */; };
-		86732A4E1A654B720025E3D5 /* OSStateMachineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 86732A4D1A654B720025E3D5 /* OSStateMachineTest.m */; };
 		86732A4F1A655C5D0025E3D5 /* E1DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EEA59D99CC5FC7F381A /* E1DataSource.m */; };
 		86732A511A6650920025E3D5 /* RSegmentedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5E06530FA2DA82911CBB /* RSegmentedDataSource.m */; };
 		86732A521A6650C10025E3D5 /* SegmentedDSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA550EE3AA1EACC1B2E523 /* SegmentedDSViewController.m */; };
+		86B9B6D81BC0620C00F48423 /* ComposedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5125ED19E3F5629A744F /* ComposedDataSource.swift */; settings = {ASSET_TAGS = (); }; };
+		86B9B6D91BC0626300F48423 /* ComposedViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D66F4F3792E379AD239 /* ComposedViewWrapper.swift */; settings = {ASSET_TAGS = (); }; };
+		86B9B6DA1BC0626800F48423 /* SegmenetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EBB38BC0FA97E48CEE1 /* SegmenetDataSource.swift */; settings = {ASSET_TAGS = (); }; };
+		86B9B6E41BC0637900F48423 /* OSSDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */; settings = {ASSET_TAGS = (); }; };
+		86B9B6EA1BC0638F00F48423 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9B6D61BC05EED00F48423 /* DataProviderTests.swift */; settings = {ASSET_TAGS = (); }; };
 		ACCA50C2FCA1FD5DA3A3E40D /* AAPLLayoutMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55AEA0B9F2D38A26113E /* AAPLLayoutMetrics.m */; };
 		ACCA526D9FB660BD4DF6CE07 /* OSPlaceholderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA515B95B5824994D47D39 /* OSPlaceholderFlowLayout.m */; };
 		ACCA531EC419B34CA8B356A8 /* OSHeadersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D282DCE383E6DD0E836 /* OSHeadersDataSource.m */; };
@@ -35,9 +35,6 @@
 		ACCA545925DCEF45A5AFF073 /* OSManagedCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA54EB1270693CBECBC423 /* OSManagedCollectionView.m */; };
 		ACCA549E398FDFC4ADE0279E /* OSSimpleDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA59E8F087700FAD15D585 /* OSSimpleDataSource.m */; };
 		ACCA54B469905219349757BA /* OSDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA529E66B72D9938898E09 /* OSDataSource.m */; };
-		ACCA553DF599EDB46CC9B21C /* SegmenetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EBB38BC0FA97E48CEE1 /* SegmenetDataSource.swift */; };
-		ACCA5636AE1647FA8DF101CD /* ComposedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5125ED19E3F5629A744F /* ComposedDataSource.swift */; };
-		ACCA579A53794E79150AD9C2 /* ComposedViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D66F4F3792E379AD239 /* ComposedViewWrapper.swift */; };
 		ACCA579DA7B6021AEE15E085 /* E1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55C0BD394E57811F54B1 /* E1ViewController.m */; };
 		ACCA58815F8C393F503493FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCA513762739FFF822B2E31 /* UIKit.framework */; };
 		ACCA591EAC63FB14125FD191 /* ComposedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA51BE35DC7A2C037236D1 /* ComposedViewController.m */; };
@@ -53,20 +50,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8628E0121BB7F84100F35196 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACCA52756EBEED074AEFD734 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8628E0061BB7F84100F35196;
-			remoteInfo = OSSDataSource;
-		};
-		8628E0141BB7F84100F35196 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACCA52756EBEED074AEFD734 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 86732A211A6547890025E3D5;
-			remoteInfo = OSDataSourceExample;
-		};
 		8628E01A1BB7F84100F35196 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ACCA52756EBEED074AEFD734 /* Project object */;
@@ -80,6 +63,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 86732A211A6547890025E3D5;
 			remoteInfo = OSDataSourceExample;
+		};
+		86B9B6E51BC0637900F48423 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACCA52756EBEED074AEFD734 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8628E0061BB7F84100F35196;
+			remoteInfo = OSSDataSource;
 		};
 		ACCA5C3115F8854CF254B35C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -118,8 +108,6 @@
 		8628E0071BB7F84100F35196 /* OSSDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSSDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8628E0091BB7F84100F35196 /* OSSDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSDataSource.h; sourceTree = "<group>"; };
 		8628E00B1BB7F84100F35196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8628E0101BB7F84100F35196 /* OSSDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSSDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8628E0171BB7F84100F35196 /* OSSDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSSDataSourceTests.swift; sourceTree = "<group>"; };
 		8628E0191BB7F84100F35196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86732A221A6547890025E3D5 /* OSDataSourceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSDataSourceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86732A251A6547890025E3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,10 +119,9 @@
 		86732A341A6547890025E3D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		86732A371A6547890025E3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		86732A3D1A6547890025E3D5 /* OSDataSourceExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSDataSourceExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86732A421A6547890025E3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86732A431A6547890025E3D5 /* OSDataSourceExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSDataSourceExampleTests.m; sourceTree = "<group>"; };
-		86732A4B1A6549020025E3D5 /* OSDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDataSourceTest.m; sourceTree = "<group>"; };
-		86732A4D1A654B720025E3D5 /* OSStateMachineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSStateMachineTest.m; sourceTree = "<group>"; };
+		86B9B6D61BC05EED00F48423 /* DataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
+		86B9B6DF1BC0637900F48423 /* OSSDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSSDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86B9B6E31BC0637900F48423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACCA50351D2042984E85D958 /* RComposedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RComposedDataSource.m; sourceTree = "<group>"; };
 		ACCA50BA49B9588362D6423F /* SegmentedDSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedDSViewController.h; sourceTree = "<group>"; };
 		ACCA51195AB86BDBD8F5E7CF /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
@@ -164,7 +151,6 @@
 		ACCA56D5CC75EA58BA73C207 /* OSManagedCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSManagedCollectionView.h; sourceTree = "<group>"; };
 		ACCA57476A58657E57E92476 /* EmptyDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyDataSource.h; sourceTree = "<group>"; };
 		ACCA58661BFB32DF70CCE5FD /* E1DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E1DataSource.h; sourceTree = "<group>"; };
-		ACCA58C881A3BBF3B4EC7163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		ACCA58E070955D0DCF186E2D /* EmptyDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyDataSource.m; sourceTree = "<group>"; };
 		ACCA59D3F8A9C8D36770FAA0 /* OSDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDataSource.h; sourceTree = "<group>"; };
 		ACCA59E8F087700FAD15D585 /* OSSimpleDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSimpleDataSource.m; sourceTree = "<group>"; };
@@ -196,14 +182,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8628E00D1BB7F84100F35196 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8628E0111BB7F84100F35196 /* OSSDataSource.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		86732A1F1A6547890025E3D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +194,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86B9B6DC1BC0637900F48423 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86B9B6E41BC0637900F48423 /* OSSDataSource.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +237,6 @@
 		8628E0161BB7F84100F35196 /* OSSDataSourceTests */ = {
 			isa = PBXGroup;
 			children = (
-				8628E0171BB7F84100F35196 /* OSSDataSourceTests.swift */,
 				8628E0191BB7F84100F35196 /* Info.plist */,
 			);
 			path = OSSDataSourceTests;
@@ -283,53 +268,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		86732A401A6547890025E3D5 /* OSDataSourceExampleTests */ = {
+		86B9B6E01BC0637900F48423 /* OSSDataSourceTests */ = {
 			isa = PBXGroup;
 			children = (
-				86732A431A6547890025E3D5 /* OSDataSourceExampleTests.m */,
-				86732A411A6547890025E3D5 /* Supporting Files */,
+				86B9B6D61BC05EED00F48423 /* DataProviderTests.swift */,
+				86B9B6E31BC0637900F48423 /* Info.plist */,
 			);
-			path = OSDataSourceExampleTests;
-			sourceTree = "<group>";
-		};
-		86732A411A6547890025E3D5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				86732A421A6547890025E3D5 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = OSSDataSourceTests;
 			sourceTree = "<group>";
 		};
 		ACCA527A0B0567744A803CD6 = {
 			isa = PBXGroup;
 			children = (
 				86732A231A6547890025E3D5 /* OSDataSourceExample */,
-				86732A401A6547890025E3D5 /* OSDataSourceExampleTests */,
 				8628E0081BB7F84100F35196 /* OSSDataSource */,
 				8628E0161BB7F84100F35196 /* OSSDataSourceTests */,
+				86B9B6E01BC0637900F48423 /* OSSDataSourceTests */,
 				ACCA5A8E8AFC538CAFD149EB /* Products */,
 				ACCA5A0230AE4E71098811BB /* OSDataSource */,
-				ACCA52D9E0FAC190CB041390 /* OSDataSourceTests */,
 				ACCA5D066EA84B6174E3FFA3 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		ACCA52D9E0FAC190CB041390 /* OSDataSourceTests */ = {
-			isa = PBXGroup;
-			children = (
-				ACCA539CB6AB1035076231B3 /* Supporting Files */,
-				86732A4B1A6549020025E3D5 /* OSDataSourceTest.m */,
-				86732A4D1A654B720025E3D5 /* OSStateMachineTest.m */,
-			);
-			path = OSDataSourceTests;
-			sourceTree = "<group>";
-		};
-		ACCA539CB6AB1035076231B3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				ACCA58C881A3BBF3B4EC7163 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		ACCA54FBC2C23E7CC2F29C80 /* Categories */ = {
@@ -384,8 +342,7 @@
 				ACCA5125ED19E3F5629A744F /* ComposedDataSource.swift */,
 				ACCA5D66F4F3792E379AD239 /* ComposedViewWrapper.swift */,
 			);
-			name = Classes;
-			path = ../Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		ACCA5838BDBDD6876142B0E8 /* SimpleDataSource */ = {
@@ -430,7 +387,7 @@
 				86732A221A6547890025E3D5 /* OSDataSourceExample.app */,
 				86732A3D1A6547890025E3D5 /* OSDataSourceExampleTests.xctest */,
 				8628E0071BB7F84100F35196 /* OSSDataSource.framework */,
-				8628E0101BB7F84100F35196 /* OSSDataSourceTests.xctest */,
+				86B9B6DF1BC0637900F48423 /* OSSDataSourceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -509,25 +466,6 @@
 			productReference = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8628E00F1BB7F84100F35196 /* OSSDataSourceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8628E0211BB7F84200F35196 /* Build configuration list for PBXNativeTarget "OSSDataSourceTests" */;
-			buildPhases = (
-				8628E00C1BB7F84100F35196 /* Sources */,
-				8628E00D1BB7F84100F35196 /* Frameworks */,
-				8628E00E1BB7F84100F35196 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8628E0131BB7F84100F35196 /* PBXTargetDependency */,
-				8628E0151BB7F84100F35196 /* PBXTargetDependency */,
-			);
-			name = OSSDataSourceTests;
-			productName = OSSDataSourceTests;
-			productReference = 8628E0101BB7F84100F35196 /* OSSDataSourceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		86732A211A6547890025E3D5 /* OSDataSourceExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86732A491A6547890025E3D5 /* Build configuration list for PBXNativeTarget "OSDataSourceExample" */;
@@ -563,6 +501,24 @@
 			name = OSDataSourceExampleTests;
 			productName = OSDataSourceExampleTests;
 			productReference = 86732A3D1A6547890025E3D5 /* OSDataSourceExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		86B9B6DE1BC0637900F48423 /* OSSDataSourceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86B9B6E71BC0637900F48423 /* Build configuration list for PBXNativeTarget "OSSDataSourceTests" */;
+			buildPhases = (
+				86B9B6DB1BC0637900F48423 /* Sources */,
+				86B9B6DC1BC0637900F48423 /* Frameworks */,
+				86B9B6DD1BC0637900F48423 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86B9B6E61BC0637900F48423 /* PBXTargetDependency */,
+			);
+			name = OSSDataSourceTests;
+			productName = OSSDataSourceTests;
+			productReference = 86B9B6DF1BC0637900F48423 /* OSSDataSourceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		ACCA578AAAF1B971DE28051B /* OSDataSourceTests */ = {
@@ -612,16 +568,15 @@
 					8628E0061BB7F84100F35196 = {
 						CreatedOnToolsVersion = 7.0;
 					};
-					8628E00F1BB7F84100F35196 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 86732A211A6547890025E3D5;
-					};
 					86732A211A6547890025E3D5 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					86732A3C1A6547890025E3D5 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 86732A211A6547890025E3D5;
+					};
+					86B9B6DE1BC0637900F48423 = {
+						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
@@ -643,20 +598,13 @@
 				86732A211A6547890025E3D5 /* OSDataSourceExample */,
 				86732A3C1A6547890025E3D5 /* OSDataSourceExampleTests */,
 				8628E0061BB7F84100F35196 /* OSSDataSource */,
-				8628E00F1BB7F84100F35196 /* OSSDataSourceTests */,
+				86B9B6DE1BC0637900F48423 /* OSSDataSourceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8628E0051BB7F84100F35196 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8628E00E1BB7F84100F35196 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -680,6 +628,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86B9B6DD1BC0637900F48423 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACCA5EB9102DFBB499335FF4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -694,17 +649,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B9B6D81BC0620C00F48423 /* ComposedDataSource.swift in Sources */,
 				8628E02D1BB7F86100F35196 /* DataProvider.swift in Sources */,
+				86B9B6DA1BC0626800F48423 /* SegmenetDataSource.swift in Sources */,
 				8628E02C1BB7F86100F35196 /* DataSource.swift in Sources */,
 				8628E02E1BB7F86100F35196 /* PlaceholderView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8628E00C1BB7F84100F35196 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8628E0181BB7F84100F35196 /* OSSDataSourceTests.swift in Sources */,
+				86B9B6D91BC0626300F48423 /* ComposedViewWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,9 +671,6 @@
 				ACCA579DA7B6021AEE15E085 /* E1ViewController.m in Sources */,
 				ACCA5C21B6950B7BB5A36744 /* EmptyDataSource.m in Sources */,
 				ACCA591EAC63FB14125FD191 /* ComposedViewController.m in Sources */,
-				ACCA553DF599EDB46CC9B21C /* SegmenetDataSource.swift in Sources */,
-				ACCA5636AE1647FA8DF101CD /* ComposedDataSource.swift in Sources */,
-				ACCA579A53794E79150AD9C2 /* ComposedViewWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,7 +678,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86732A441A6547890025E3D5 /* OSDataSourceExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86B9B6DB1BC0637900F48423 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86B9B6EA1BC0638F00F48423 /* DataProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,8 +693,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86732A4C1A6549020025E3D5 /* OSDataSourceTest.m in Sources */,
-				86732A4E1A654B720025E3D5 /* OSStateMachineTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,16 +721,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8628E0131BB7F84100F35196 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8628E0061BB7F84100F35196 /* OSSDataSource */;
-			targetProxy = 8628E0121BB7F84100F35196 /* PBXContainerItemProxy */;
-		};
-		8628E0151BB7F84100F35196 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 86732A211A6547890025E3D5 /* OSDataSourceExample */;
-			targetProxy = 8628E0141BB7F84100F35196 /* PBXContainerItemProxy */;
-		};
 		8628E01B1BB7F84100F35196 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8628E0061BB7F84100F35196 /* OSSDataSource */;
@@ -788,6 +730,11 @@
 			isa = PBXTargetDependency;
 			target = 86732A211A6547890025E3D5 /* OSDataSourceExample */;
 			targetProxy = 86732A3E1A6547890025E3D5 /* PBXContainerItemProxy */;
+		};
+		86B9B6E61BC0637900F48423 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8628E0061BB7F84100F35196 /* OSSDataSource */;
+			targetProxy = 86B9B6E51BC0637900F48423 /* PBXContainerItemProxy */;
 		};
 		ACCA553ACFA0173C12CD30E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -867,39 +814,6 @@
 			};
 			name = Release;
 		};
-		8628E0221BB7F84200F35196 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = OSSDataSourceTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = by.baydet.OSSDataSourceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSDataSourceExample.app/OSDataSourceExample";
-			};
-			name = Debug;
-		};
-		8628E0231BB7F84200F35196 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = OSSDataSourceTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = by.baydet.OSSDataSourceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSDataSourceExample.app/OSDataSourceExample";
-			};
-			name = Release;
-		};
 		86732A451A6547890025E3D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -961,6 +875,35 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSDataSourceExample.app/OSDataSourceExample";
+			};
+			name = Release;
+		};
+		86B9B6E81BC0637900F48423 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = OSSDataSourceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = by.baydet.OSSDataSourceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86B9B6E91BC0637900F48423 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = OSSDataSourceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = by.baydet.OSSDataSourceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -1101,14 +1044,7 @@
 				8628E0201BB7F84200F35196 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		8628E0211BB7F84200F35196 /* Build configuration list for PBXNativeTarget "OSSDataSourceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8628E0221BB7F84200F35196 /* Debug */,
-				8628E0231BB7F84200F35196 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86732A491A6547890025E3D5 /* Build configuration list for PBXNativeTarget "OSDataSourceExample" */ = {
 			isa = XCConfigurationList;
@@ -1127,6 +1063,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		86B9B6E71BC0637900F48423 /* Build configuration list for PBXNativeTarget "OSSDataSourceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86B9B6E81BC0637900F48423 /* Debug */,
+				86B9B6E91BC0637900F48423 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		ACCA5350F9D893F3ECF6C3C1 /* Build configuration list for PBXNativeTarget "OSDataSource" */ = {
 			isa = XCConfigurationList;

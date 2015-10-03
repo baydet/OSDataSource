@@ -6,8 +6,7 @@
 import Foundation
 
 public protocol Paginable {
-    var page: Int {get}
-    func loadNextPage() -> Bool
+    func loadMore() -> Bool
 }
 
 public typealias LoadingCompletionBlock = (ContentLoadingCompletionState) -> Void
@@ -18,15 +17,22 @@ public enum ContentLoadingCompletionState {
     case Error(error: ErrorType)
 }
 
+internal protocol DataProviderDelegate: class {
+    func dataProvider(dataProvider: DataProvider, didChangeState state:DataProvider.LoadingState)
+}
+
 public class DataProvider {
-    private enum LoadingState {
+    internal enum LoadingState {
         case Initial
         case LoadingContent
+        case LoadingMoreContent
         case RefreshingContent
         case LoadedContent
         case NoContent
         case Error
     }
+    internal weak var delegate: DataProviderDelegate?
+    public var noContentMessage: String = ""
 
     private let possibleTransitions: [LoadingState : [LoadingState]] = [
             .Initial : [.LoadingContent],
@@ -37,14 +43,21 @@ public class DataProvider {
             .Error : [.LoadingContent, .RefreshingContent]
     ]
 
-    private var state: LoadingState = .Initial {
+    internal private(set) var state: LoadingState = .Initial {
         willSet {
             assert(possibleTransitions[state]!.contains(newValue), "cannot perform transition from \(state) to \(newValue)")
         }
+        didSet {
+            delegate?.dataProvider(self, didChangeState: state)
+        }
     }
 
-    private func beginLoading() {
+    internal func beginLoading() {
         state = .LoadingContent
+    }
+
+    internal func endLoading(withState state: LoadingState) {
+        self.state = state
     }
 
     public func numberOfSections() -> Int {
@@ -53,10 +66,6 @@ public class DataProvider {
 
     public func numberOfItems(inSection section: Int) -> Int {
         return 0
-    }
-
-    public func loadContent() throws {
-
     }
 
     public func loadContent(completionBlock:((LoadingCompletionBlock) -> Void)) {
@@ -68,14 +77,28 @@ public class DataProvider {
     }
 }
 
-public class DefaultDataProvider: DataProvider {
+public class DefaultDataProvider <T> : DataProvider {
 
-    override func numberOfSections() -> Int {
-        return 0
+    private var objects: [T]?
+
+    required public init(objects: [T]?) {
+        super.init()
+        loadContent(objects)
     }
 
-    override func numberOfItems(inSection section: Int) -> Int {
-        return 0
+    override public func numberOfSections() -> Int {
+        return objects == nil ? 0 : 1
+    }
+
+    override public func numberOfItems(inSection section: Int) -> Int {
+        return objects?.count ?? 0
+    }
+
+    public func loadContent(objects: [T]?) {
+        beginLoading()
+        self.objects = objects
+        let state = self.objects?.count > 0 ? LoadingState.LoadedContent : LoadingState.NoContent
+        endLoading(withState: state)
     }
 
 
