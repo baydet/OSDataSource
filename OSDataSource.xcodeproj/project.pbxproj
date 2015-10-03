@@ -27,6 +27,7 @@
 		86B9B6DA1BC0626800F48423 /* SegmenetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EBB38BC0FA97E48CEE1 /* SegmenetDataSource.swift */; settings = {ASSET_TAGS = (); }; };
 		86B9B6E41BC0637900F48423 /* OSSDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */; settings = {ASSET_TAGS = (); }; };
 		86B9B6EA1BC0638F00F48423 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9B6D61BC05EED00F48423 /* DataProviderTests.swift */; settings = {ASSET_TAGS = (); }; };
+		86B9B6EC1BC066D200F48423 /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9B6EB1BC066D200F48423 /* DataSourceTests.swift */; settings = {ASSET_TAGS = (); }; };
 		ACCA50C2FCA1FD5DA3A3E40D /* AAPLLayoutMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55AEA0B9F2D38A26113E /* AAPLLayoutMetrics.m */; };
 		ACCA526D9FB660BD4DF6CE07 /* OSPlaceholderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA515B95B5824994D47D39 /* OSPlaceholderFlowLayout.m */; };
 		ACCA531EC419B34CA8B356A8 /* OSHeadersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D282DCE383E6DD0E836 /* OSHeadersDataSource.m */; };
@@ -122,6 +123,7 @@
 		86B9B6D61BC05EED00F48423 /* DataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
 		86B9B6DF1BC0637900F48423 /* OSSDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSSDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B9B6E31BC0637900F48423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86B9B6EB1BC066D200F48423 /* DataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceTests.swift; sourceTree = "<group>"; };
 		ACCA50351D2042984E85D958 /* RComposedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RComposedDataSource.m; sourceTree = "<group>"; };
 		ACCA50BA49B9588362D6423F /* SegmentedDSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedDSViewController.h; sourceTree = "<group>"; };
 		ACCA51195AB86BDBD8F5E7CF /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				86B9B6D61BC05EED00F48423 /* DataProviderTests.swift */,
 				86B9B6E31BC0637900F48423 /* Info.plist */,
+				86B9B6EB1BC066D200F48423 /* DataSourceTests.swift */,
 			);
 			path = OSSDataSourceTests;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B9B6EC1BC066D200F48423 /* DataSourceTests.swift in Sources */,
 				86B9B6EA1BC0638F00F48423 /* DataProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
