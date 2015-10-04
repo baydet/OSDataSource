@@ -23,13 +23,14 @@ class DataProviderTests: XCTestCase {
     
     func testDataProvider() {
         let objects = ["1", "2", "3"]
-        let dataSource = DefaultDataProvider<String>(objects: objects)
-        XCTAssert(dataSource.numberOfSections() == 1, "wrong sections count")
-        XCTAssert(dataSource.numberOfItems(inSection: 0) == 3, "wrong sections count")
-        dataSource.loadContent(nil)
-        XCTAssert(dataSource.numberOfSections() == 0, "wrong sections count")
-        XCTAssert(dataSource.numberOfItems(inSection: 0) == 0, "wrong sections count")
-
+        let dataProvider = DefaultDataProvider<String>(objects: objects)
+        XCTAssert(dataProvider.state == DataProvider.LoadingState.LoadedContent, "wrong state")
+        XCTAssert(dataProvider.numberOfSections() == 1, "wrong sections count")
+        XCTAssert(dataProvider.numberOfItems(inSection: 0) == 3, "wrong number of items count")
+        dataProvider.loadContent(nil)
+        XCTAssert(dataProvider.state == DataProvider.LoadingState.NoContent, "wrong state")
+        XCTAssert(dataProvider.numberOfSections() == 0, "wrong sections count")
+        XCTAssert(dataProvider.numberOfItems(inSection: 0) == 0, "wrong number of items count")
     }
     
     func testPerformanceExample() {
