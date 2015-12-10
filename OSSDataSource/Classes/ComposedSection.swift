@@ -1,9 +1,8 @@
 //
 //  ComposedSection.swift
-//  Good2Drive
 //
 //  Created by Alexander Evsyuchenya on 12/1/15.
-//  Copyright © 2015 Engaged Mobility. All rights reserved.
+//  Copyright © 2015 baydet. All rights reserved.
 //
 
 private extension Range where Element: Comparable {

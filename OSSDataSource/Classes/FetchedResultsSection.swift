@@ -1,6 +1,6 @@
 //
 // Created by Alexander Evsyuchenya on 12/9/15.
-// Copyright (c) 2015 Engaged Mobility. All rights reserved.
+// Copyright (c) 2015 baydet. All rights reserved.
 //
 
 import Foundation
