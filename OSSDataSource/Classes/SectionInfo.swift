@@ -41,9 +41,9 @@ public protocol Section: class {
 public extension Section {
     func forEach(@noescape block: (RowInfo, IndexPath) -> Void) {
         let sectionsCount = numberOfSubSections()
-        for i in 0...sectionsCount-1 {
+        for i in 0..<sectionsCount {
             let rowsCount = numberOfItems(inSection: i)
-            for j in 0...rowsCount-1 {
+            for j in 0..<rowsCount {
                 let path = IndexPath(index: j, section: i)
                 block(self[path], path)
             }
