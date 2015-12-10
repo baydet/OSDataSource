@@ -10,9 +10,6 @@
 		8628E00A1BB7F84100F35196 /* OSSDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 8628E0091BB7F84100F35196 /* OSSDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8628E01C1BB7F84100F35196 /* OSSDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */; };
 		8628E01D1BB7F84100F35196 /* OSSDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8628E02C1BB7F86100F35196 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8628DFBB1BB7DBF600F35196 /* DataSource.swift */; settings = {ASSET_TAGS = (); }; };
-		8628E02D1BB7F86100F35196 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA53805508089171E51BA8 /* DataProvider.swift */; settings = {ASSET_TAGS = (); }; };
-		8628E02E1BB7F86100F35196 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA51195AB86BDBD8F5E7CF /* PlaceholderView.swift */; settings = {ASSET_TAGS = (); }; };
 		86732A271A6547890025E3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86732A261A6547890025E3D5 /* main.m */; };
 		86732A2A1A6547890025E3D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86732A291A6547890025E3D5 /* AppDelegate.m */; };
 		86732A2D1A6547890025E3D5 /* OSDataSourceExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86732A2B1A6547890025E3D5 /* OSDataSourceExample.xcdatamodeld */; };
@@ -22,12 +19,9 @@
 		86732A4F1A655C5D0025E3D5 /* E1DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EEA59D99CC5FC7F381A /* E1DataSource.m */; };
 		86732A511A6650920025E3D5 /* RSegmentedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5E06530FA2DA82911CBB /* RSegmentedDataSource.m */; };
 		86732A521A6650C10025E3D5 /* SegmentedDSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA550EE3AA1EACC1B2E523 /* SegmentedDSViewController.m */; };
-		86B9B6D81BC0620C00F48423 /* ComposedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5125ED19E3F5629A744F /* ComposedDataSource.swift */; settings = {ASSET_TAGS = (); }; };
-		86B9B6D91BC0626300F48423 /* ComposedViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D66F4F3792E379AD239 /* ComposedViewWrapper.swift */; settings = {ASSET_TAGS = (); }; };
-		86B9B6DA1BC0626800F48423 /* SegmenetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5EBB38BC0FA97E48CEE1 /* SegmenetDataSource.swift */; settings = {ASSET_TAGS = (); }; };
-		86B9B6E41BC0637900F48423 /* OSSDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */; settings = {ASSET_TAGS = (); }; };
-		86B9B6EA1BC0638F00F48423 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9B6D61BC05EED00F48423 /* DataProviderTests.swift */; settings = {ASSET_TAGS = (); }; };
-		86B9B6EC1BC066D200F48423 /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9B6EB1BC066D200F48423 /* DataSourceTests.swift */; settings = {ASSET_TAGS = (); }; };
+		86B9B6E41BC0637900F48423 /* OSSDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8628E0071BB7F84100F35196 /* OSSDataSource.framework */; };
+		86B9B6EA1BC0638F00F48423 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9B6D61BC05EED00F48423 /* DataProviderTests.swift */; };
+		86B9B6EC1BC066D200F48423 /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9B6EB1BC066D200F48423 /* DataSourceTests.swift */; };
 		ACCA50C2FCA1FD5DA3A3E40D /* AAPLLayoutMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA55AEA0B9F2D38A26113E /* AAPLLayoutMetrics.m */; };
 		ACCA526D9FB660BD4DF6CE07 /* OSPlaceholderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA515B95B5824994D47D39 /* OSPlaceholderFlowLayout.m */; };
 		ACCA531EC419B34CA8B356A8 /* OSHeadersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5D282DCE383E6DD0E836 /* OSHeadersDataSource.m */; };
@@ -48,6 +42,9 @@
 		ACCA5DBE8D4ABE34EF5410BF /* OSManagedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA5388F5CD48B4FF3342C8 /* OSManagedDataSource.m */; };
 		ACCA5DF27441B82E68E3AF2C /* libOSDataSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCA5AD9AA1F404DC7BA6F4C /* libOSDataSource.a */; };
 		ACCA5EEE88CF9289CDCAEDEA /* RComposedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCA50351D2042984E85D958 /* RComposedDataSource.m */; };
+		D35984321C197D5A00D7C8B0 /* ComposedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359842F1C197D5A00D7C8B0 /* ComposedSection.swift */; };
+		D35984331C197D5A00D7C8B0 /* FetchedResultsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35984301C197D5A00D7C8B0 /* FetchedResultsSection.swift */; };
+		D35984341C197D5A00D7C8B0 /* SectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35984311C197D5A00D7C8B0 /* SectionInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +102,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8628DFBB1BB7DBF600F35196 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		8628E0071BB7F84100F35196 /* OSSDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSSDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8628E0091BB7F84100F35196 /* OSSDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSDataSource.h; sourceTree = "<group>"; };
 		8628E00B1BB7F84100F35196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,8 +121,6 @@
 		86B9B6EB1BC066D200F48423 /* DataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceTests.swift; sourceTree = "<group>"; };
 		ACCA50351D2042984E85D958 /* RComposedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RComposedDataSource.m; sourceTree = "<group>"; };
 		ACCA50BA49B9588362D6423F /* SegmentedDSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedDSViewController.h; sourceTree = "<group>"; };
-		ACCA51195AB86BDBD8F5E7CF /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
-		ACCA5125ED19E3F5629A744F /* ComposedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposedDataSource.swift; sourceTree = "<group>"; };
 		ACCA513762739FFF822B2E31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACCA5150AD9D6F89DBBD8C4E /* OSHeadersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSHeadersDataSource.h; sourceTree = "<group>"; };
 		ACCA515B95B5824994D47D39 /* OSPlaceholderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPlaceholderFlowLayout.m; sourceTree = "<group>"; };
@@ -138,7 +132,6 @@
 		ACCA52485F772F3B5E09BCB8 /* OSSimpleDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSimpleDataSource.h; sourceTree = "<group>"; };
 		ACCA529E66B72D9938898E09 /* OSDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDataSource.m; sourceTree = "<group>"; };
 		ACCA536BD5C170FA3193C3FA /* ComposedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposedViewController.h; sourceTree = "<group>"; };
-		ACCA53805508089171E51BA8 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		ACCA5388F5CD48B4FF3342C8 /* OSManagedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSManagedDataSource.m; sourceTree = "<group>"; };
 		ACCA54A2082179F68109130D /* AAPLLayoutMetrics_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLLayoutMetrics_Private.h; sourceTree = "<group>"; };
 		ACCA54EB1270693CBECBC423 /* OSManagedCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSManagedCollectionView.m; sourceTree = "<group>"; };
@@ -163,16 +156,17 @@
 		ACCA5CB7BC2D4D6E070D6D85 /* RComposedDataSource_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RComposedDataSource_Private.m; sourceTree = "<group>"; };
 		ACCA5D282DCE383E6DD0E836 /* OSHeadersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSHeadersDataSource.m; sourceTree = "<group>"; };
 		ACCA5D448CB5B04A118F30AF /* OSStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSStateMachine.h; sourceTree = "<group>"; };
-		ACCA5D66F4F3792E379AD239 /* ComposedViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposedViewWrapper.swift; sourceTree = "<group>"; };
 		ACCA5D6C97A1ED9E9495D0C3 /* RAlignedFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAlignedFlowLayout.m; sourceTree = "<group>"; };
 		ACCA5D713A5BF81EE7618C39 /* OSDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCA5E06530FA2DA82911CBB /* RSegmentedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSegmentedDataSource.m; sourceTree = "<group>"; };
 		ACCA5EAC7A830E7FBFC9C3D8 /* RComposedDataSource_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RComposedDataSource_Private.h; sourceTree = "<group>"; };
 		ACCA5EAF2784B9BD0B1515A2 /* OSStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSStateMachine.m; sourceTree = "<group>"; };
-		ACCA5EBB38BC0FA97E48CEE1 /* SegmenetDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmenetDataSource.swift; sourceTree = "<group>"; };
 		ACCA5EEA59D99CC5FC7F381A /* E1DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = E1DataSource.m; sourceTree = "<group>"; };
 		ACCA5F7A276EA40230C448DF /* RDataSource_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDataSource_Private.h; sourceTree = "<group>"; };
 		ACCA5F9E7189363A1CC0D134 /* OSPlaceholderFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPlaceholderFlowLayout.h; sourceTree = "<group>"; };
+		D359842F1C197D5A00D7C8B0 /* ComposedSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposedSection.swift; sourceTree = "<group>"; };
+		D35984301C197D5A00D7C8B0 /* FetchedResultsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsSection.swift; sourceTree = "<group>"; };
+		D35984311C197D5A00D7C8B0 /* SectionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,12 +322,9 @@
 		ACCA564293B8DE71FD1AF29D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8628DFBB1BB7DBF600F35196 /* DataSource.swift */,
-				ACCA53805508089171E51BA8 /* DataProvider.swift */,
-				ACCA51195AB86BDBD8F5E7CF /* PlaceholderView.swift */,
-				ACCA5EBB38BC0FA97E48CEE1 /* SegmenetDataSource.swift */,
-				ACCA5125ED19E3F5629A744F /* ComposedDataSource.swift */,
-				ACCA5D66F4F3792E379AD239 /* ComposedViewWrapper.swift */,
+				D359842F1C197D5A00D7C8B0 /* ComposedSection.swift */,
+				D35984301C197D5A00D7C8B0 /* FetchedResultsSection.swift */,
+				D35984311C197D5A00D7C8B0 /* SectionInfo.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -555,7 +546,8 @@
 		ACCA52756EBEED074AEFD734 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = baydet;
 				TargetAttributes = {
 					8628E0061BB7F84100F35196 = {
@@ -642,12 +634,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86B9B6D81BC0620C00F48423 /* ComposedDataSource.swift in Sources */,
-				8628E02D1BB7F86100F35196 /* DataProvider.swift in Sources */,
-				86B9B6DA1BC0626800F48423 /* SegmenetDataSource.swift in Sources */,
-				8628E02C1BB7F86100F35196 /* DataSource.swift in Sources */,
-				8628E02E1BB7F86100F35196 /* PlaceholderView.swift in Sources */,
-				86B9B6D91BC0626300F48423 /* ComposedViewWrapper.swift in Sources */,
+				D35984341C197D5A00D7C8B0 /* SectionInfo.swift in Sources */,
+				D35984331C197D5A00D7C8B0 /* FetchedResultsSection.swift in Sources */,
+				D35984321C197D5A00D7C8B0 /* ComposedSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +749,7 @@
 		8628E01F1BB7F84200F35196 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -786,6 +776,7 @@
 		8628E0201BB7F84200F35196 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -821,6 +812,7 @@
 				INFOPLIST_FILE = OSDataSourceExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "by.orangesoft.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -834,6 +826,7 @@
 				INFOPLIST_FILE = OSDataSourceExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "by.orangesoft.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -920,6 +913,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1065,6 +1059,7 @@
 				86B9B6E91BC0637900F48423 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACCA5350F9D893F3ECF6C3C1 /* Build configuration list for PBXNativeTarget "OSDataSource" */ = {
 			isa = XCConfigurationList;

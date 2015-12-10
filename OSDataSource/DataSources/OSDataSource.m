@@ -365,8 +365,6 @@
     NSInteger numberOfSections = self.numberOfSections;
     NSMutableDictionary *metrics = [NSMutableDictionary dictionary];
 
-    UIColor *defaultBackground = [UIColor whiteColor];
-
     OSLayoutSectionMetrics *globalMetrics = [self snapshotMetricsForSectionAtIndex:AAPLGlobalSection];
     metrics[@(AAPLGlobalSection)] = globalMetrics;
 
