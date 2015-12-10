@@ -38,7 +38,7 @@ public protocol Section: class {
     func decorationForSectionAtIndex(index: Int) -> SectionInfo?
 }
 
-extension Section {
+public extension Section {
     func forEach(@noescape block: (RowInfo, IndexPath) -> Void) {
         let sectionsCount = numberOfSubSections()
         for i in 0...sectionsCount-1 {

@@ -6,8 +6,8 @@
 import Foundation
 import CoreData
 
-@objc class FetchedResultsSection: NSObject, Section, NSFetchedResultsControllerDelegate {
-    weak var updater: SectionItemsUpdatesDelegate?
+@objc public class FetchedResultsSection: NSObject, Section, NSFetchedResultsControllerDelegate {
+    public weak var updater: SectionItemsUpdatesDelegate?
     let fetchedResultsController: NSFetchedResultsController
     
     init(fetchedResultsController: NSFetchedResultsController) {
@@ -17,18 +17,18 @@ import CoreData
         let _ = try? self.fetchedResultsController.performFetch()
     }
     
-    func numberOfItems(inSection section: Int) -> Int {
+    public func numberOfItems(inSection section: Int) -> Int {
         guard let sectionInfo = fetchedResultsController.sections?[section] else {
             return 0
         }
         return sectionInfo.numberOfObjects
     }
     
-    func numberOfSubSections() -> Int {
+    public func numberOfSubSections() -> Int {
         return fetchedResultsController.sections?.count ?? 0
     }
     
-    subscript(indexPath: IndexPath) -> RowInfo {
+    public subscript(indexPath: IndexPath) -> RowInfo {
         get {
             return fetchedResultsController.objectAtIndexPath(NSIndexPath(forItem: indexPath.index, inSection: indexPath.section)) as! RowInfo
         }
@@ -37,11 +37,11 @@ import CoreData
         }
     }
     
-    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+    public func controllerWillChangeContent(controller: NSFetchedResultsController) {
         updater?.notifyBeginUpdates(self)
     }
     
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?)
+    public func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?)
     {
         switch(type) {
             
@@ -68,7 +68,7 @@ import CoreData
         }
     }
     
-    func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
+    public func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
         switch(type) {
         case .Insert:
             updater?.notifyInsertSections(self, sectionIndex: sectionIndex)
@@ -79,7 +79,7 @@ import CoreData
         }
     }
     
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+    public func controllerDidChangeContent(controller: NSFetchedResultsController) {
         updater?.notifyEndUpdates(self)
     }
 
